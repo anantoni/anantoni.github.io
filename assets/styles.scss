@@ -1100,6 +1100,17 @@ a:hover {
   margin: 0.45rem 0 0;
 }
 
+.publication-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-card__authors {
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+  margin: 0.55rem 0 0;
+}
+
 .signal-card__body,
 .publication-card__note,
 .timeline-item__description,

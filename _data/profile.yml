@@ -21,28 +21,45 @@ quick_facts:
   - label: Works across
     value: Journalism, research, criticism, and technical writing
   - label: Academic base
-    value: University of Athens and the PLaST research group
-  - label: Prior roles
+    value: University of Athens, Department of Informatics and Telecommunications
+  - label: Research group
+    value: PLaST
+  - label: Publishing projects
+    value: BORDERPOLAR and Optima Games
+  - label: Prior affiliations
     value: Oracle Labs Australia and CERN
 
 bio_paragraphs:
   - "I am an investigative journalist, writer, and researcher working on the political economy of technology. My reporting focuses on the systems behind the slogans: AI as an economic and social force, software as infrastructure, and platforms as institutions that shape labor, markets, and public life."
-  - Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens and a member of the PLaST research group. My academic work has centered on static analysis of Java programs, large-scale software systems, and the practical challenge of making precise program analysis scale.
+  - Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens, where I began doctoral work in October 2016 under the supervision of Yannis Smaragdakis. I am also a member of the PLaST research group. My academic work has centered on static analysis of Java programs, large-scale software systems, and the practical challenge of making precise program analysis scale.
   - That technical background informs the editorial work. I move between research, criticism, and public writing to explain complex technical subjects without flattening them into marketing. Much of the work is about replacing narrative laundering with evidence, analysis, and clarity.
+  - Outside academic publishing, I am the creator and writer behind BORDERPOLAR and Optima Games, two publishing projects focused on technology, games, digital culture, and guides written with an emphasis on technical substance and readability.
 
 affiliations:
   - name: University of Athens
     role: PhD researcher, Department of Informatics and Telecommunications
     url: https://www.di.uoa.gr/
   - name: PLaST Research Group
-    role: Member
+    role: Member, programming languages and software technologies
     url: https://plast-lab.github.io/
+
+past_affiliations:
+  - name: Oracle Labs Australia
+    role: Research assistant, 2019
+    url: https://labs.oracle.com/
+  - name: CERN
+    role: Intern, 2012 - 2013
+    url: https://home.cern/
 
 outlets:
   - name: BORDERPOLAR
-    role: Independent publishing project
+    role: Creator and writer
     url: https://borderpolar.com/
-    note: Writing and commentary across technology, games, and digital culture.
+    note: Essays, reporting, criticism, and commentary across technology, games, and digital culture.
+  - name: Optima Games
+    role: Creator and writer
+    url: https://optimagames.com/
+    note: Gaming guides, strategy writing, and explainers for players who want usable detail instead of filler.
 
 focus_areas:
   - title: AI economics
@@ -63,35 +80,105 @@ principles:
     description: I focus on incentives, governance, and the organizations behind technical systems, not just the products themselves.
 
 experience:
-  - period: Since 2016
+  - period: Since Oct. 2016
     title: PhD researcher
     organization: University of Athens
     location: Athens, Greece
-    description: Research on static analysis of Java programs, enterprise software, and the scalability limits of precise program analysis.
+    description: Doctoral research on static analysis of Java programs, enterprise software, and the scalability limits of precise program analysis.
     url: https://www.di.uoa.gr/
   - period: 2019
     title: Research assistant
     organization: Oracle Labs Australia
     location: Brisbane, Australia
     description: Worked on research related to enterprise Java analysis and the engineering constraints of program analysis in practice.
+    url: https://labs.oracle.com/
   - period: 2012 - 2013
     title: Intern
     organization: CERN
     location: Geneva
     description: Early research and engineering experience inside a large international scientific institution.
+    url: https://home.cern/
   - period: Ongoing
     title: Independent publishing
     organization: BORDERPOLAR
     location: Online
     description: Essays, explainers, and commentary spanning technology, criticism, culture, and adjacent digital subjects.
     url: https://borderpolar.com/
+  - period: Ongoing
+    title: Creator and writer
+    organization: Optima Games
+    location: Online
+    description: Gaming guides, strategy explainers, and reviews written with the same emphasis on clarity, structure, and useful detail.
+    url: https://optimagames.com/
 
 publications:
+  - year: 2025
+    venue: PACMPL / OOPSLA
+    type: Research paper
+    title: "Universal Scalability in Declarative Program Analysis (with Choice-Based Combination Pruning)"
+    authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
+    note: Work on scaling declarative program analysis by controlling combinatorial explosion without collapsing precision.
+    url: https://doi.org/10.1145/3729255
+  - year: 2023
+    venue: ICACS
+    type: Conference paper
+    title: "Benchmarking Classifiers for Loan Default Prediction using Archetypal Analysis"
+    authors: Giorgos Chondroulis, Jakub M. Ardanuy, Anastasios Antoniadis, and Sotirios Chatzis
+    note: Comparative work on loan-default prediction and classifier evaluation using archetypal analysis.
+    url: https://doi.org/10.1007/978-3-031-58379-0_18
+  - year: 2022
+    venue: Cyprus University of Technology
+    type: Thesis
+    title: "Information-Theoretic Local Competition and Stochasticity for Deep Learning"
+    authors: Anastasios Antoniadis
+    note: Thesis work on diversified representations, stochasticity, and local competition in deep learning.
+    url: https://ktisis.cut.ac.cy/handle/20.500.14279/31465
+  - year: 2022
+    venue: AAAI
+    type: Conference paper
+    title: "Competing Mutual Information Constraints with Stochastic Competition-Based Activations for Learning Diversified Representations"
+    authors: Konstantinos P. Panousis, Anastasios Antoniadis, and Sotirios Chatzis
+    note: Representation-learning work centered on competing mutual-information objectives and competition-based activations.
+    url: https://doi.org/10.1609/aaai.v36i11.21583
+  - year: 2021
+    venue: MEDPOWER
+    type: Conference paper
+    title: "A Bayesian Optimization Approach for the Robust Unit Commitment of Identical Generating Units"
+    authors: Pavlos Nikolaidis, Anastasios Antoniadis, and Sotirios P. Chatzis
+    note: Optimization work on robust unit commitment for identical generating units under uncertainty.
+    url: https://doi.org/10.1049/icp.2021.1224
+  - year: 2020
+    venue: ECOOP
+    type: Research paper
+    title: "Static Analysis of Shape in TensorFlow Programs"
+    authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
+    note: Static analysis work for reasoning about tensor shapes in TensorFlow programs.
+    url: https://doi.org/10.4230/LIPIcs.ECOOP.2020.21
+  - year: 2020
+    venue: DARTS
+    type: Artifact
+    title: "Static Analysis of Shape in TensorFlow Programs (Artifact)"
+    authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
+    note: Artifact companion for the ECOOP paper on TensorFlow shape analysis.
+    url: https://doi.org/10.4230/DARTS.6.2.6
   - year: 2020
     venue: PLDI
+    type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
+    authors: Anastasios Antoniadis and Yannis Smaragdakis
     note: Research on Java enterprise application analysis and the framework behavior that dominates precision and scalability.
+    url: https://doi.org/10.1145/3385412.3385991
+  - year: 2018
+    venue: ECOOP/ISSTA Doctoral Symposium
+    type: Doctoral symposium paper
+    title: "Two-phase Analysis for Precision and Scalability"
+    authors: Anastasios Antoniadis
+    note: Doctoral symposium work on managing the tradeoff between precision and scalability in static analysis.
+    url: https://conf.researchr.org/details/ecoop-issta-2018/ecoop-issta-2018-doctoral-symposium/5/Two-phase-Analysis-for-Precision-and-Scalability
   - year: 2017
     venue: SOAP
+    type: Workshop paper
     title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
+    authors: Tony Antoniadis, Konstantinos Triantafyllou, and Yannis Smaragdakis
     note: Work on portability and engineering tradeoffs in Datalog-based program analysis.
+    url: https://doi.org/10.1145/3102066.3102128

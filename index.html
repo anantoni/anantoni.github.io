@@ -42,7 +42,7 @@ layout: home
   </article>
 
   <article class="story-card">
-    <p class="story-card__eyebrow">Affiliations</p>
+    <p class="story-card__eyebrow">Current Affiliations</p>
     <div class="link-stack">
       {% for affiliation in profile.affiliations %}
         <a href="{{ affiliation.url }}" class="link-stack__item">
@@ -50,14 +50,22 @@ layout: home
           <span class="link-stack__meta">{{ affiliation.role }}</span>
         </a>
       {% endfor %}
-      {% for outlet in profile.outlets %}
-        <a href="{{ outlet.url }}" class="link-stack__item">
-          <span class="link-stack__title">{{ outlet.name }}</span>
-          <span class="link-stack__meta">{{ outlet.role }}</span>
-        </a>
-      {% endfor %}
     </div>
   </article>
+
+  {% if profile.past_affiliations %}
+    <article class="story-card">
+      <p class="story-card__eyebrow">Previous Affiliations</p>
+      <div class="link-stack">
+        {% for affiliation in profile.past_affiliations %}
+          <a href="{{ affiliation.url }}" class="link-stack__item">
+            <span class="link-stack__title">{{ affiliation.name }}</span>
+            <span class="link-stack__meta">{{ affiliation.role }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </article>
+  {% endif %}
 
   <article class="story-card">
     <p class="story-card__eyebrow">Editorial Principles</p>
@@ -78,12 +86,15 @@ layout: home
   </article>
 
   <article class="story-card">
-    <p class="story-card__eyebrow">Publishing</p>
-    {% for outlet in profile.outlets %}
-      <p class="story-card__body">
-        <a href="{{ outlet.url }}">{{ outlet.name }}</a> serves as an independent outlet for {{ outlet.note | downcase }}
-      </p>
-    {% endfor %}
+    <p class="story-card__eyebrow">Publishing Projects</p>
+    <div class="link-stack">
+      {% for outlet in profile.outlets %}
+        <a href="{{ outlet.url }}" class="link-stack__item">
+          <span class="link-stack__title">{{ outlet.name }}</span>
+          <span class="link-stack__meta">{{ outlet.role }} · {{ outlet.note }}</span>
+        </a>
+      {% endfor %}
+    </div>
   </article>
 </section>
 
@@ -141,16 +152,26 @@ layout: home
       <p class="eyebrow section-header__eyebrow">Selected Research</p>
       <h2 class="section-header__title">Publications</h2>
     </div>
-    <p class="section-header__summary">Published work that reflects the program analysis side of the profile.</p>
+    <p class="section-header__summary">Published work across program analysis, machine learning, and adjacent technical research.</p>
   </div>
   <div class="publication-grid">
     {% for publication in profile.publications %}
       <article class="publication-card">
         <div class="publication-card__meta">
           <span>{{ publication.venue }}</span>
+          {% if publication.type %}
+            <span>{{ publication.type }}</span>
+          {% endif %}
           <span>{{ publication.year }}</span>
         </div>
-        <h3 class="publication-card__title">{{ publication.title }}</h3>
+        {% if publication.url %}
+          <h3 class="publication-card__title"><a href="{{ publication.url }}">{{ publication.title }}</a></h3>
+        {% else %}
+          <h3 class="publication-card__title">{{ publication.title }}</h3>
+        {% endif %}
+        {% if publication.authors %}
+          <p class="publication-card__authors">{{ publication.authors }}</p>
+        {% endif %}
         <p class="publication-card__note">{{ publication.note }}</p>
       </article>
     {% endfor %}
