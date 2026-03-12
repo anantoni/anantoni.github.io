@@ -1,10 +1,16 @@
-<div class="height-full text-left {% if site.style == 'dark' %}box-shadow{% else %}border border-gray-light{% endif %} bg-white rounded-1 p-3">
-  <div class="d-flex flex-justify-between flex-items-start mb-1">
-    <h1 class="f4 lh-condensed mb-1">
+{% assign post_excerpt = post.excerpt | strip_html | strip_newlines | strip | truncate: 140 %}
+
+<article class="post-card height-full text-left">
+  <p class="post-card__type">Article</p>
+  <div class="d-flex flex-justify-between flex-items-start mb-2">
+    <h3 class="post-card__title mb-0">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </h3>
   </div>
-  <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
-</div>
+  {% if post_excerpt != "" %}
+    <p class="post-card__excerpt">{{ post_excerpt }}</p>
+  {% endif %}
+  <div class="post-card__meta">{{ post.date | date: "%b %d, %Y" }}</div>
+</article>

@@ -1,6 +1,12 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Projects</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+<section id="projects" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Selected Work</p>
+      <h2 class="section-header__title">Projects</h2>
+    </div>
+    <p class="section-header__summary">Repositories, tools, and technical work that sit alongside the reporting.</p>
+  </div>
+  <div class="card-grid">
   {% if site.projects.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}
   {% else %}
@@ -19,9 +25,10 @@
 
   {% for repository in filtered_repos | limit: site.projects.limit %}
     {% unless site.projects.exclude.projects contains repository.name %}
-      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+      <div class="card-grid__item">
         {% include repo-card.html %}
       </div>
     {% endunless %}
   {% endfor %}
-</div>
+  </div>
+</section>

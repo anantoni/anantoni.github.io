@@ -1,9 +1,16 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Thoughts</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Articles I've written.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+<section id="writing" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Latest Essays</p>
+      <h2 class="section-header__title">Writing</h2>
+    </div>
+    <p class="section-header__summary">Articles and commentary focused on technology, power, and public understanding.</p>
+  </div>
+  <div class="card-grid">
   {% for post in site.posts limit: 6 %}
-    <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+    <div class="card-grid__item">
       {% include post-card.html %}
     </div>
   {% endfor %}
-</div>
+  </div>
+</section>

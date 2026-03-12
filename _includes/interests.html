@@ -1,9 +1,16 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Interests</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Topics that I want to learn more about.</p>
-<div class="d-flex flex-wrap gutter-condensed mb-4">
+<section id="interests" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Current Curiosities</p>
+      <h2 class="section-header__title">Interests</h2>
+    </div>
+    <p class="section-header__summary">Themes, disciplines, and adjacent domains that keep informing the work.</p>
+  </div>
+  <div class="card-grid card-grid--topics">
   {% for topic in site.topics %}
-    <div class="col-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+    <div class="card-grid__item">
       {% include topic-card.html %}
     </div>
   {% endfor %}
-</div>
+  </div>
+</section>
