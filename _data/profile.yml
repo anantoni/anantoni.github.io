@@ -119,7 +119,7 @@ publications:
     type: Research paper
     title: "Universal Scalability in Declarative Program Analysis (with Choice-Based Combination Pruning)"
     authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
-    note: Work on scaling declarative program analysis by controlling combinatorial explosion without collapsing precision.
+    note: Work on scaling declarative program analysis by controlling combinatorial explosion with minimal completeness loss.
     url: https://dl.acm.org/doi/10.1145/3763129
   - year: 2020
     venue: ECOOP
@@ -133,7 +133,7 @@ publications:
     type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
     authors: Anastasios Antoniadis, Nikos Filippakis, Paddy Krishnan, Raghavendra Ramesh, Nicholas Allen, and Yannis Smaragdakis
-    note: Research on Java enterprise application analysis and the framework behavior that dominates precision and scalability.
+    note: Research on Java enterprise application analysis and the framework and cachebehavior that dominates precision, completeness, and scalability.
     url: https://dl.acm.org/doi/10.1145/3385412.3386026
   - year: 2018
     venue: ECOOP/ISSTA Doctoral Symposium
