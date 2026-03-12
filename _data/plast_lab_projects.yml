@@ -20,3 +20,27 @@
   organization: PLaST Lab
   role: Contributor
   context: Research artifact tied to the PLDI 2020 work on Java enterprise applications.
+
+- name: cclyzer-souffle
+  html_url: https://github.com/plast-lab/cclyzer-souffle
+  description: CClyzer port to Souffle lang.
+  language: C++
+  organization: PLaST Lab
+  role: Contributor
+  context: Souffle-based work on LLVM bitcode analysis that fits the lab's broader Datalog and static-analysis tooling.
+
+- name: HeapDL
+  html_url: https://github.com/plast-lab/HeapDL
+  description: Heaps Don't Lie! Analyzes standard JVM and Android heap snapshots to improve the completeness of program analysis tools such as Doop.
+  language: Java
+  organization: PLaST Lab
+  role: Contributor
+  context: Companion analysis tooling for improving Java and Android program-analysis completeness using heap snapshots.
+
+- name: Clue Common
+  html_url: https://github.com/plast-lab/clue-common
+  description: Common functionality shared by the components of the Clyze unified analysis framework.
+  language: Java & Groovy
+  organization: PLaST Lab
+  role: Contributor
+  context: Auxiliary infrastructure for feeding runtime-derived facts into static-analysis workflows.
