@@ -88,10 +88,16 @@ experience:
     location: Brisbane, Australia
     description: Worked on research related to enterprise Java analysis and the engineering constraints of program analysis in practice.
     url: https://labs.oracle.com/
+  - period: 2014 - 2016
+    title: Research assistant
+    organization: University of Athens
+    location: Athens, Greece
+    description: Research on static analysis of Java programs.
+    url: https://www.di.uoa.gr/
   - period: 2012 - 2013
     title: Intern
     organization: CERN
-    location: Geneva
+    location: Geneva, Switzerland
     description: Early research and engineering experience inside a large international scientific institution.
     url: https://home.cern/
   - period: Ongoing
