@@ -82,6 +82,12 @@ experience:
     location: Athens, Greece
     description: Doctoral research on static analysis of Java programs, enterprise software, and the scalability limits of precise program analysis.
     url: https://www.di.uoa.gr/
+  - period: 2023
+    title: Software engineer
+    organization: Satways Ltd.
+    location: Athens, Greece
+    description: Ecliplse RCP software development and Elastic Stack development for log management and analysis.
+    url: https://www.satways.net/
   - period: 2019
     title: Research assistant
     organization: Oracle Labs Australia

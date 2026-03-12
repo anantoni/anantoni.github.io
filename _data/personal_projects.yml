@@ -13,3 +13,35 @@
   organization: Independent
   role: Maintainer
   context: Example code for building program-analysis workflows on top of IRIS and Datalog-based reasoning.
+
+- name: resume
+  html_url: https://github.com/anantoni/resume
+  description: Curriculum vitae source maintained in TeX.
+  language: TeX
+  organization: Independent
+  role: Maintainer
+  context: Version-controlled resume source for producing and updating a reproducible academic and professional CV.
+
+- name: logstash-demo
+  html_url: https://github.com/anantoni/logstash-demo
+  description: Elastic Stack demo for custom log message logging.
+  language: Shell
+  organization: Independent
+  role: Maintainer
+  context: Small infrastructure demo for testing log ingestion and processing workflows with Logstash and the Elastic Stack.
+
+- name: datomic-micro-doop
+  html_url: https://github.com/anantoni/datomic-micro-doop
+  description: Datomic pointer analysis - new schema.
+  language: Java
+  organization: Independent
+  role: Maintainer
+  context: Experimental work on representing pointer-analysis data with Datomic-inspired schemas in a Doop-adjacent setup.
+
+- name: micro-doop
+  html_url: https://github.com/anantoni/micro-doop
+  description: micro-doop analysis.
+  language: Shell
+  organization: Independent
+  role: Maintainer
+  context: Lightweight analysis repository for running and iterating on smaller-scale Doop-style experiments.
