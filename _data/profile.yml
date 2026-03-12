@@ -108,32 +108,32 @@ publications:
     title: "Universal Scalability in Declarative Program Analysis (with Choice-Based Combination Pruning)"
     authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
     note: Work on scaling declarative program analysis by controlling combinatorial explosion without collapsing precision.
-    url: https://doi.org/10.1145/3729255
+    url: https://dl.acm.org/doi/10.1145/3763129
   - year: 2020
     venue: ECOOP
     type: Research paper
     title: "Static Analysis of Shape in TensorFlow Programs"
     authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
     note: Static analysis work for reasoning about tensor shapes in TensorFlow programs.
-    url: https://doi.org/10.4230/LIPIcs.ECOOP.2020.21
+    url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2020.15
   - year: 2020
     venue: PLDI
     type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
-    authors: Anastasios Antoniadis and Yannis Smaragdakis
+    authors: Anastasios Antoniadis, Nikos Filippakis, Paddy Krishnan, Raghavendra Ramesh, Nicholas Allen, and Yannis Smaragdakis
     note: Research on Java enterprise application analysis and the framework behavior that dominates precision and scalability.
-    url: https://doi.org/10.1145/3385412.3385991
+    url: https://dl.acm.org/doi/10.1145/3385412.3386026
   - year: 2018
     venue: ECOOP/ISSTA Doctoral Symposium
     type: Doctoral symposium paper
     title: "Two-phase Analysis for Precision and Scalability"
     authors: Anastasios Antoniadis
     note: Doctoral symposium work on managing the tradeoff between precision and scalability in static analysis.
-    url: https://conf.researchr.org/details/ecoop-issta-2018/ecoop-issta-2018-doctoral-symposium/5/Two-phase-Analysis-for-Precision-and-Scalability
+    url: https://2018.ecoop.org/details/ecoop-issta-2018-doctoral-symposium/9/Two-phase-Analysis-for-Precision-and-Scalability
   - year: 2017
     venue: SOAP
     type: Workshop paper
     title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
     authors: Tony Antoniadis, Konstantinos Triantafyllou, and Yannis Smaragdakis
     note: Work on portability and engineering tradeoffs in Datalog-based program analysis.
-    url: https://doi.org/10.1145/3102066.3102128
+    url: https://dl.acm.org/doi/10.1145/3088515.3088522
