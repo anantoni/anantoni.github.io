@@ -127,13 +127,6 @@ publications:
     note: Static analysis work for reasoning about tensor shapes in TensorFlow programs.
     url: https://doi.org/10.4230/LIPIcs.ECOOP.2020.21
   - year: 2020
-    venue: DARTS
-    type: Artifact
-    title: "Static Analysis of Shape in TensorFlow Programs (Artifact)"
-    authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
-    note: Artifact companion for the ECOOP paper on TensorFlow shape analysis.
-    url: https://doi.org/10.4230/DARTS.6.2.6
-  - year: 2020
     venue: PLDI
     type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
