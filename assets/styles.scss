@@ -882,21 +882,34 @@ a:hover {
 }
 
 .skip-link {
-  background: var(--paper-strong);
-  border: 1px solid var(--paper-border);
-  border-radius: 999px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   color: var(--ink-strong);
+  height: 1px;
   left: 1rem;
-  padding: 0.7rem 1rem;
+  margin: -1px;
+  overflow: hidden;
   position: absolute;
+  white-space: nowrap;
+  width: 1px;
   text-decoration: none;
   top: 1rem;
-  transform: translateY(-180%);
   z-index: 20;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:focus,
+.skip-link:focus-visible {
+  background: var(--paper-strong);
+  border: 1px solid var(--paper-border);
+  border-radius: 999px;
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  padding: 0.7rem 1rem;
+  white-space: normal;
+  width: auto;
 }
 
 .masthead__signal-list {
