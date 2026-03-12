@@ -25,7 +25,7 @@ quick_facts:
   - label: Research group
     value: PLaST
   - label: Publishing projects
-    value: BORDERPOLAR and Optima Games
+    value: BORDERPOLAR
   - label: Prior affiliations
     value: Oracle Labs Australia and CERN
 
@@ -33,7 +33,7 @@ bio_paragraphs:
   - "I am an investigative journalist, writer, and researcher working on the political economy of technology. My reporting focuses on the systems behind the slogans: AI as an economic and social force, software as infrastructure, and platforms as institutions that shape labor, markets, and public life."
   - Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens, where I began doctoral work in October 2016 under the supervision of Yannis Smaragdakis. I am also a member of the PLaST research group. My academic work has centered on static analysis of Java programs, large-scale software systems, and the practical challenge of making precise program analysis scale.
   - That technical background informs the editorial work. I move between research, criticism, and public writing to explain complex technical subjects without flattening them into marketing. Much of the work is about replacing narrative laundering with evidence, analysis, and clarity.
-  - Outside academic publishing, I am the creator and writer behind BORDERPOLAR and Optima Games, two publishing projects focused on technology, games, digital culture, and guides written with an emphasis on technical substance and readability.
+  - Outside academic publishing, I am the creator and writer behind BORDERPOLAR, a publishing project focused on technology, games, digital culture, and guides written with an emphasis on technical substance and readability.
 
 affiliations:
   - name: University of Athens
@@ -56,10 +56,6 @@ outlets:
     role: Creator and writer
     url: https://borderpolar.com/
     note: Essays, reporting, criticism, and commentary across technology, games, and digital culture.
-  - name: Optima Games
-    role: Creator and writer
-    url: https://optimagames.com/
-    note: Gaming guides, strategy writing, and explainers for players who want usable detail instead of filler.
 
 focus_areas:
   - title: AI economics
@@ -99,17 +95,11 @@ experience:
     description: Early research and engineering experience inside a large international scientific institution.
     url: https://home.cern/
   - period: Ongoing
-    title: Independent publishing
+    title: Independent publishing, writing, and research
     organization: BORDERPOLAR
     location: Online
     description: Essays, explainers, and commentary spanning technology, criticism, culture, and adjacent digital subjects.
     url: https://borderpolar.com/
-  - period: Ongoing
-    title: Creator and writer
-    organization: Optima Games
-    location: Online
-    description: Gaming guides, strategy explainers, and reviews written with the same emphasis on clarity, structure, and useful detail.
-    url: https://optimagames.com/
 
 publications:
   - year: 2025
