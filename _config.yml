@@ -43,16 +43,24 @@ social_media:
   # twitter: your_username
   # unsplash: your_username
   # vk: your_username
-  # website: http://your_website_url
+  website: https://borderpolar.com/
   # youtube: your_username
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: AI Economics
+    description: Incentives, business models, and labor dynamics around AI systems.
 
-  - name: Web design
+  - name: Static Analysis
+    description: Precise and scalable program analysis for large software systems.
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: Platform Governance
+    description: The institutions, policies, and market power behind digital platforms.
+
+  - name: Software Infrastructure
+    description: The technical layers that underpin reliability, scale, and organizational dependence.
+
+  - name: Digital Culture
+    description: How technical products reshape communities, media, and everyday life online.
+
+  - name: Investigative Reporting
+    description: Evidence-driven reporting on technology companies, narratives, and power.

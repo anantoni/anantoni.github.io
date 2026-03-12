@@ -1,0 +1,97 @@
+name: Anastasios Antoniadis
+eyebrow: Investigative journalist / PhD researcher / technical writer
+headline: I investigate technology as infrastructure, business, and power.
+meta_description: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher based in Greece, covering AI, software systems, platform power, and digital culture.
+sidebar_bio: Based in Greece, I work across investigative reporting, long-form criticism, research, and technical writing, with a focus on AI, software systems, platform power, and digital culture.
+hero_intro: "Based in Greece, I work at the intersection of technology, artificial intelligence, software engineering, business, and digital culture. The aim is consistent across all of it: look past hype, identify what is actually happening, and explain why it matters."
+author_note: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher whose work connects technical expertise with public understanding.
+footer_note: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
+
+hero_stats:
+  - label: Journalism
+    value: Investigations, criticism, and explainers grounded in technical detail.
+  - label: Research
+    value: Static analysis, large-scale software systems, and practical precision.
+  - label: Coverage
+    value: AI economics, platform governance, digital labor, and software infrastructure.
+
+quick_facts:
+  - label: Based in
+    value: Greece
+  - label: Works across
+    value: Journalism, research, criticism, and technical writing
+  - label: Academic base
+    value: University of Athens and the PLaST research group
+  - label: Prior roles
+    value: Oracle Labs Australia and CERN
+
+bio_paragraphs:
+  - "I am an investigative journalist, writer, and researcher working on the political economy of technology. My reporting focuses on the systems behind the slogans: AI as an economic and social force, software as infrastructure, and platforms as institutions that shape labor, markets, and public life."
+  - Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens and a member of the PLaST research group. My academic work has centered on static analysis of Java programs, large-scale software systems, and the practical challenge of making precise program analysis scale.
+  - That technical background informs the editorial work. I move between research, criticism, and public writing to explain complex technical subjects without flattening them into marketing. Much of the work is about replacing narrative laundering with evidence, analysis, and clarity.
+
+affiliations:
+  - name: University of Athens
+    role: PhD researcher, Department of Informatics and Telecommunications
+    url: https://www.di.uoa.gr/
+  - name: PLaST Research Group
+    role: Member
+    url: https://plast-lab.github.io/
+
+outlets:
+  - name: BORDERPOLAR
+    role: Independent publishing project
+    url: https://borderpolar.com/
+    note: Writing and commentary across technology, games, and digital culture.
+
+focus_areas:
+  - title: AI economics
+    description: Incentives, labor relations, market concentration, and the business logic driving contemporary AI systems.
+  - title: Software infrastructure
+    description: The technical layers that quietly shape reliability, dependency, security, and institutional power.
+  - title: Platform governance
+    description: How firms, interfaces, and policy regimes structure control over digital markets and public discourse.
+  - title: Program analysis
+    description: Static analysis of Java and the engineering tradeoffs involved in precise, scalable analysis at real-world size.
+
+principles:
+  - title: Evidence over spectacle
+    description: Technology is easier to understand once investor theater and launch-event mythology are stripped away.
+  - title: Technical depth for public readers
+    description: Complex systems deserve careful explanation, not buzzwords or condescension.
+  - title: Institutions matter
+    description: I focus on incentives, governance, and the organizations behind technical systems, not just the products themselves.
+
+experience:
+  - period: Since 2016
+    title: PhD researcher
+    organization: University of Athens
+    location: Athens, Greece
+    description: Research on static analysis of Java programs, enterprise software, and the scalability limits of precise program analysis.
+    url: https://www.di.uoa.gr/
+  - period: 2019
+    title: Research assistant
+    organization: Oracle Labs Australia
+    location: Brisbane, Australia
+    description: Worked on research related to enterprise Java analysis and the engineering constraints of program analysis in practice.
+  - period: 2012 - 2013
+    title: Intern
+    organization: CERN
+    location: Geneva
+    description: Early research and engineering experience inside a large international scientific institution.
+  - period: Ongoing
+    title: Independent publishing
+    organization: BORDERPOLAR
+    location: Online
+    description: Essays, explainers, and commentary spanning technology, criticism, culture, and adjacent digital subjects.
+    url: https://borderpolar.com/
+
+publications:
+  - year: 2020
+    venue: PLDI
+    title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
+    note: Research on Java enterprise application analysis and the framework behavior that dominates precision and scalability.
+  - year: 2017
+    venue: SOAP
+    title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
+    note: Work on portability and engineering tradeoffs in Datalog-based program analysis.

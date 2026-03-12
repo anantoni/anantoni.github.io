@@ -7,13 +7,15 @@
         class="topic-card__placeholder flex-shrink-0 text-center mx-auto mb-3"
         style="width:64px; height:64px; line-height:64px;"
       >
-        #
+        {{ topic.name | slice: 0, 1 }}
       </div>
     {% endif %}
+    <p class="topic-card__eyebrow">Area of focus</p>
     <p class="topic-card__title mb-0 mt-1">{{ topic.name }}</p>
     {% if topic.description %}
       <p class="topic-card__description mb-0 mt-1">{{ topic.description }}</p>
     {% endif %}
+    <span class="topic-card__action">Explore focus</span>
   </a>
 {% else %}
   <div class="github-component topic-card position-relative height-full text-center">
@@ -24,12 +26,14 @@
         class="topic-card__placeholder flex-shrink-0 text-center mx-auto mb-3"
         style="width:64px; height:64px; line-height:64px;"
       >
-        #
+        {{ topic.name | slice: 0, 1 }}
       </div>
     {% endif %}
+    <p class="topic-card__eyebrow">Area of focus</p>
     <p class="topic-card__title mb-0 mt-1">{{ topic.name }}</p>
     {% if topic.description %}
       <p class="topic-card__description mb-0 mt-1">{{ topic.description }}</p>
     {% endif %}
+    <span class="topic-card__action">Ongoing inquiry</span>
   </div>
 {% endif %}

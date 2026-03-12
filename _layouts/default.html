@@ -1,14 +1,15 @@
 {% include header.html %}
+{% assign profile = site.data.profile %}
 
 {% if site.layout == 'stacked' %}
   <div class="site-shell site-shell--stacked">
-    <section class="site-sidebar site-sidebar--stacked">
+    <section class="site-sidebar site-sidebar--stacked" aria-label="Profile">
       <div class="site-sidebar__inner site-sidebar__inner--stacked">
         {% include masthead.html metadata=false %}
       </div>
     </section>
 
-    <main class="site-main site-main--page">
+    <main id="main-content" class="site-main site-main--page">
       <div class="site-main__inner">
         <article class="content-panel">
           <p class="back-link">
@@ -17,9 +18,14 @@
               Home
             </a>
           </p>
+          <p class="page-kicker">Page</p>
           <h1 class="page-title">{{ page.title }}</h1>
           <div class="article">
             {{ content }}
+          </div>
+          <div class="author-note">
+            <p class="eyebrow">Profile</p>
+            <p class="author-note__body">{{ profile.author_note }}</p>
           </div>
         </article>
       </div>
@@ -27,13 +33,13 @@
   </div>
 {% else %}
   <div class="site-shell site-shell--sidebar">
-    <aside class="site-sidebar">
+    <aside class="site-sidebar" aria-label="Profile">
       <div class="site-sidebar__inner">
         {% include masthead.html metadata=true %}
       </div>
     </aside>
 
-    <main class="site-main site-main--page">
+    <main id="main-content" class="site-main site-main--page">
       <div class="site-main__inner">
         <article class="content-panel">
           <p class="back-link">
@@ -42,9 +48,14 @@
               Home
             </a>
           </p>
+          <p class="page-kicker">Page</p>
           <h1 class="page-title">{{ page.title }}</h1>
           <div class="article">
             {{ content }}
+          </div>
+          <div class="author-note">
+            <p class="eyebrow">Profile</p>
+            <p class="author-note__body">{{ profile.author_note }}</p>
           </div>
         </article>
       </div>

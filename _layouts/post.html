@@ -1,4 +1,5 @@
 {% include header.html %}
+{% assign profile = site.data.profile %}
 
 {% assign shareable_social_media = '' | split: ',' %}
 
@@ -17,13 +18,13 @@
 
 {% if site.layout == 'stacked' %}
   <div class="site-shell site-shell--stacked">
-    <section class="site-sidebar site-sidebar--stacked">
+    <section class="site-sidebar site-sidebar--stacked" aria-label="Profile">
       <div class="site-sidebar__inner site-sidebar__inner--stacked">
         {% include masthead.html metadata=false %}
       </div>
     </section>
 
-    <main class="site-main site-main--page">
+    <main id="main-content" class="site-main site-main--page">
       <div class="site-main__inner">
         <article class="content-panel">
           <p class="back-link">
@@ -32,11 +33,16 @@
               Home
             </a>
           </p>
+          <p class="page-kicker">Essay</p>
           <h1 class="page-title">{{ page.title }}</h1>
           <p class="page-meta">Published {{ page.date | date: "%b %d, %Y" }}</p>
           <div class="post-layout">
             <div class="article">
               {{ content }}
+              <div class="author-note">
+                <p class="eyebrow">About the author</p>
+                <p class="author-note__body">{{ profile.author_note }}</p>
+              </div>
             </div>
             {% if total_shareable_services > 0 %}
               <aside class="share-panel">
@@ -60,13 +66,13 @@
   </div>
 {% else %}
   <div class="site-shell site-shell--sidebar">
-    <aside class="site-sidebar">
+    <aside class="site-sidebar" aria-label="Profile">
       <div class="site-sidebar__inner">
         {% include masthead.html metadata=true %}
       </div>
     </aside>
 
-    <main class="site-main site-main--page">
+    <main id="main-content" class="site-main site-main--page">
       <div class="site-main__inner">
         <article class="content-panel">
           <p class="back-link">
@@ -75,11 +81,16 @@
               Home
             </a>
           </p>
+          <p class="page-kicker">Essay</p>
           <h1 class="page-title">{{ page.title }}</h1>
           <p class="page-meta">Published {{ page.date | date: "%b %d, %Y" }}</p>
           <div class="post-layout">
             <div class="article">
               {{ content }}
+              <div class="author-note">
+                <p class="eyebrow">About the author</p>
+                <p class="author-note__body">{{ profile.author_note }}</p>
+              </div>
             </div>
             {% if total_shareable_services > 0 %}
               <aside class="share-panel">

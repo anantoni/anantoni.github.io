@@ -1,2 +1,24 @@
+{% assign profile = site.data.profile %}
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="eyebrow site-footer__eyebrow">{{ profile.name }}</p>
+      <p class="site-footer__summary">{{ profile.footer_note }}</p>
+    </div>
+
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#experience">Experience</a>
+      <a href="{{ '/' | relative_url }}#publications">Publications</a>
+      <a href="{{ '/' | relative_url }}#projects">Projects</a>
+      <a href="{{ '/' | relative_url }}#writing">Writing</a>
+    </nav>
+
+    <p class="site-footer__meta">
+      {{ "now" | date: "%Y" }} / {{ profile.name }} / Built with Jekyll and GitHub Pages.
+    </p>
+  </div>
+</footer>
   </body>
 </html>

@@ -2,13 +2,13 @@
 
 {% if site.layout == 'stacked' %}
   <div class="site-shell site-shell--stacked">
-    <section class="site-sidebar site-sidebar--stacked">
+    <section class="site-sidebar site-sidebar--stacked" aria-label="Profile">
       <div class="site-sidebar__inner site-sidebar__inner--stacked">
         {% include masthead.html metadata=true %}
       </div>
     </section>
 
-    <main class="site-main site-main--home">
+    <main id="main-content" class="site-main site-main--home">
       <div class="site-main__inner">
         {% unless content == "" %}
           <div class="home-intro">
@@ -30,13 +30,13 @@
   </div>
 {% else %}
   <div class="site-shell site-shell--sidebar">
-    <aside class="site-sidebar">
+    <aside class="site-sidebar" aria-label="Profile">
       <div class="site-sidebar__inner">
         {% include masthead.html metadata=true %}
       </div>
     </aside>
 
-    <main class="site-main site-main--home">
+    <main id="main-content" class="site-main site-main--home">
       <div class="site-main__inner">
         {% unless content == ""  %}
           <div class="home-intro">

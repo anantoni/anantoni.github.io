@@ -1,0 +1,22 @@
+- name: doop
+  html_url: https://github.com/plast-lab/doop
+  description: The official repo of Doop, the declarative pointer analysis framework.
+  language: Java
+  organization: PLaST Lab
+  role: Contributor
+  context: Core static-analysis infrastructure used across the lab's Java analysis research.
+
+- name: doop-benchmarks
+  html_url: https://github.com/plast-lab/doop-benchmarks
+  description: Repository used for Doop benchmarks and platform library assets.
+  organization: PLaST Lab
+  role: Contributor
+  context: Companion repository for benchmarking and platform setup around Doop.
+
+- name: sound-modulo-analysis-openjdk-23
+  html_url: https://github.com/plast-lab/sound-modulo-analysis-openjdk-23
+  description: Modified sound-modulo-analysis OpenJDK 23 artifact described in the PLDI 2020 Java enterprise analysis paper.
+  language: Java
+  organization: PLaST Lab
+  role: Contributor
+  context: Research artifact tied to the PLDI 2020 work on Java enterprise applications.

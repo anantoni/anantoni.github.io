@@ -1,64 +1,74 @@
 ---
 layout: home
 ---
+{% assign profile = site.data.profile %}
+
 <section class="hero-panel">
   <div class="hero-panel__copy">
-    <p class="eyebrow">Investigative journalism / AI criticism / software systems</p>
-    <h1 class="hero-panel__title">I report on technology as power, not spectacle.</h1>
-    <p class="hero-panel__lede">
-      Based in Greece, I work at the intersection of technology, artificial intelligence, software engineering, business, and digital culture. The throughline is consistent: look past the hype, identify what is actually happening, and explain why it matters.
-    </p>
+    <p class="eyebrow">{{ profile.eyebrow }}</p>
+    <h1 class="hero-panel__title">{{ profile.headline }}</h1>
+    <p class="hero-panel__lede">{{ profile.hero_intro }}</p>
   </div>
 
   <div class="hero-panel__rail">
-    <div class="hero-stat">
-      <span class="hero-stat__value">Journalism</span>
-      <span class="hero-stat__label">Investigations, criticism, and long-form writing anchored in technical detail.</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat__value">Research</span>
-      <span class="hero-stat__label">PhD work on static analysis, large-scale software systems, and practical precision.</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat__value">Coverage</span>
-      <span class="hero-stat__label">AI economics, platform power, digital labor, software infrastructure, and governance.</span>
-    </div>
+    {% for stat in profile.hero_stats %}
+      <div class="hero-stat">
+        <span class="hero-stat__value">{{ stat.label }}</span>
+        <span class="hero-stat__label">{{ stat.value }}</span>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
-<section id="insights" class="story-grid">
+<section id="about" class="story-grid">
   <article class="story-card story-card--wide">
-    <p class="story-card__eyebrow">Approach</p>
-    <h2 class="story-card__title">Technical expertise without marketing varnish.</h2>
-    <p class="story-card__body">
-      I write about AI not as a magic trick for investors and executives to applaud on stage, but as a real economic, political, and social force that deserves scrutiny, context, and serious analysis. My work is driven by a strong interest in how technical systems shape power, incentives, institutions, and everyday life.
-    </p>
+    <p class="story-card__eyebrow">About</p>
+    <h2 class="story-card__title">Technical depth without the corporate varnish.</h2>
+    {% for paragraph in profile.bio_paragraphs %}
+      <p class="story-card__body">{{ paragraph }}</p>
+    {% endfor %}
   </article>
 
   <article class="story-card">
-    <p class="story-card__eyebrow">Reporting Focus</p>
-    <ul class="chip-list">
-      <li>AI economics</li>
-      <li>Software engineering</li>
-      <li>Platform governance</li>
-      <li>Digital labor</li>
-      <li>Business incentives</li>
-      <li>Narrative laundering</li>
-    </ul>
+    <p class="story-card__eyebrow">At A Glance</p>
+    <div class="fact-list">
+      {% for fact in profile.quick_facts %}
+        <div class="fact-item">
+          <span class="fact-item__label">{{ fact.label }}</span>
+          <span class="fact-item__value">{{ fact.value }}</span>
+        </div>
+      {% endfor %}
+    </div>
   </article>
 
   <article class="story-card">
-    <p class="story-card__eyebrow">Research Base</p>
-    <p class="story-card__body">
-      Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens and a member of the PLaST research group. My academic work on Java static analysis and scalable program analysis gives me a practical foundation for reporting on AI systems, software infrastructure, and the gap between what technology companies promise and what their systems actually deliver.
-    </p>
+    <p class="story-card__eyebrow">Affiliations</p>
+    <div class="link-stack">
+      {% for affiliation in profile.affiliations %}
+        <a href="{{ affiliation.url }}" class="link-stack__item">
+          <span class="link-stack__title">{{ affiliation.name }}</span>
+          <span class="link-stack__meta">{{ affiliation.role }}</span>
+        </a>
+      {% endfor %}
+      {% for outlet in profile.outlets %}
+        <a href="{{ outlet.url }}" class="link-stack__item">
+          <span class="link-stack__title">{{ outlet.name }}</span>
+          <span class="link-stack__meta">{{ outlet.role }}</span>
+        </a>
+      {% endfor %}
+    </div>
   </article>
 
   <article class="story-card">
-    <p class="story-card__eyebrow">Editorial Aim</p>
-    <p class="story-card__body">
-      I move between research, criticism, journalism, and technical writing, trying to make complex ideas understandable without flattening them into slogans. A large part of the work is resisting fashionable narratives and replacing them with evidence, analysis, and clarity.
-    </p>
+    <p class="story-card__eyebrow">Editorial Principles</p>
+    <div class="principle-list">
+      {% for principle in profile.principles %}
+        <div class="principle-item">
+          <h3 class="principle-item__title">{{ principle.title }}</h3>
+          <p class="principle-item__body">{{ principle.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </article>
 
   <article class="story-card story-card--quote">
@@ -69,8 +79,80 @@ layout: home
 
   <article class="story-card">
     <p class="story-card__eyebrow">Publishing</p>
-    <p class="story-card__body">
-      Across journalism, blogging, commentary, and photography, I have explored technology, gaming, criticism, and culture with the same editorial standard: precision, depth, and perspective.
-    </p>
+    {% for outlet in profile.outlets %}
+      <p class="story-card__body">
+        <a href="{{ outlet.url }}">{{ outlet.name }}</a> serves as an independent outlet for {{ outlet.note | downcase }}
+      </p>
+    {% endfor %}
   </article>
+</section>
+
+<section id="focus" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Reporting And Research</p>
+      <h2 class="section-header__title">Focus Areas</h2>
+    </div>
+    <p class="section-header__summary">The recurring themes that connect the journalism, technical work, and long-form criticism.</p>
+  </div>
+  <div class="signal-grid">
+    {% for area in profile.focus_areas %}
+      <article class="signal-card">
+        <p class="signal-card__eyebrow">{{ forloop.index | prepend: "0" }}</p>
+        <h3 class="signal-card__title">{{ area.title }}</h3>
+        <p class="signal-card__body">{{ area.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="experience" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Background</p>
+      <h2 class="section-header__title">Experience</h2>
+    </div>
+    <p class="section-header__summary">Research, publishing, and technical work across academia, industry, and independent writing.</p>
+  </div>
+  <div class="timeline">
+    {% for entry in profile.experience %}
+      <article class="timeline-item">
+        <div class="timeline-item__period">{{ entry.period }}</div>
+        <div class="timeline-item__content">
+          <p class="timeline-item__role">{{ entry.title }}</p>
+          {% if entry.url %}
+            <h3 class="timeline-item__organization"><a href="{{ entry.url }}">{{ entry.organization }}</a></h3>
+          {% else %}
+            <h3 class="timeline-item__organization">{{ entry.organization }}</h3>
+          {% endif %}
+          {% if entry.location %}
+            <p class="timeline-item__location">{{ entry.location }}</p>
+          {% endif %}
+          <p class="timeline-item__description">{{ entry.description }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="publications" class="content-section">
+  <div class="section-header">
+    <div>
+      <p class="eyebrow section-header__eyebrow">Selected Research</p>
+      <h2 class="section-header__title">Publications</h2>
+    </div>
+    <p class="section-header__summary">Published work that reflects the program analysis side of the profile.</p>
+  </div>
+  <div class="publication-grid">
+    {% for publication in profile.publications %}
+      <article class="publication-card">
+        <div class="publication-card__meta">
+          <span>{{ publication.venue }}</span>
+          <span>{{ publication.year }}</span>
+        </div>
+        <h3 class="publication-card__title">{{ publication.title }}</h3>
+        <p class="publication-card__note">{{ publication.note }}</p>
+      </article>
+    {% endfor %}
+  </div>
 </section>

@@ -12,5 +12,8 @@
   {% if post_excerpt != "" %}
     <p class="post-card__excerpt">{{ post_excerpt }}</p>
   {% endif %}
-  <div class="post-card__meta">{{ post.date | date: "%b %d, %Y" }}</div>
+  <div class="post-card__footer">
+    <div class="post-card__meta">{{ post.date | date: "%b %d, %Y" }}</div>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="post-card__action">Read article</a>
+  </div>
 </article>

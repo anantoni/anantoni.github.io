@@ -4,16 +4,43 @@
   {% assign metadata_styles = 'masthead__meta-item' %}
 {% endif %}
 
+{% assign profile = site.data.profile %}
+{% assign person_name = profile.name | default: user.name | default: user.login %}
+{% assign person_bio = profile.sidebar_bio | default: user.bio %}
+{% assign person_location = user.location | default: "Greece" %}
+
 <div class="masthead">
   <div class="masthead__portrait-frame">
-    <img src="{{ user.avatar_url }}" class="circle masthead__portrait" alt="{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}">
+    <img src="{{ user.avatar_url }}" class="circle masthead__portrait" alt="{{ person_name }}">
   </div>
 
   <div class="masthead__copy">
-    <p class="eyebrow masthead__eyebrow">Journalist and Researcher</p>
-    <h1 class="masthead__name">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
-    <p class="masthead__bio">{{ user.bio }}</p>
+    <p class="eyebrow masthead__eyebrow">{{ profile.eyebrow | default: "Journalist and Researcher" }}</p>
+    <h1 class="masthead__name">{{ person_name }}</h1>
+    <p class="masthead__bio">{{ person_bio }}</p>
   </div>
+
+  {% if profile.quick_facts %}
+    <div class="masthead__signal-list">
+      {% for fact in profile.quick_facts limit: 3 %}
+        <div class="masthead__signal">
+          <span class="masthead__signal-label">{{ fact.label }}</span>
+          <span class="masthead__signal-value">{{ fact.value }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if profile.affiliations %}
+    <div class="masthead__affiliations">
+      {% for affiliation in profile.affiliations %}
+        <a href="{{ affiliation.url }}" class="masthead__affiliation">
+          <span class="masthead__affiliation-role">{{ affiliation.role }}</span>
+          <span class="masthead__affiliation-name">{{ affiliation.name }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 
   {% if include.metadata %}
     <div class="masthead__meta">
@@ -29,10 +56,10 @@
           <span>{{ user.email }}</span>
         </a>
       {% endif %}
-      {% if user.location %}
+      {% if person_location %}
         <div class="{{ metadata_styles }}">
           {% octicon location height:20 class:"masthead__meta-icon" fill:{{ icon_color }} aria-label:Location %}
-          <span>{{ user.location }}</span>
+          <span>{{ person_location }}</span>
         </div>
       {% endif %}
     </div>
@@ -52,5 +79,14 @@
     {% if user.hireable %}
       <span title="Hire me" class="masthead__badge">Available for hire</span>
     {% endif %}
+
+    <nav class="masthead__nav" aria-label="Site sections">
+      <a href="{{ '/' | relative_url }}#about" class="masthead__nav-link">About</a>
+      <a href="{{ '/' | relative_url }}#focus" class="masthead__nav-link">Focus</a>
+      <a href="{{ '/' | relative_url }}#experience" class="masthead__nav-link">Experience</a>
+      <a href="{{ '/' | relative_url }}#publications" class="masthead__nav-link">Publications</a>
+      <a href="{{ '/' | relative_url }}#projects" class="masthead__nav-link">Projects</a>
+      <a href="{{ '/' | relative_url }}#writing" class="masthead__nav-link">Writing</a>
+    </nav>
   {% endif %}
 </div>

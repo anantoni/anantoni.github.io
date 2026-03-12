@@ -1,10 +1,10 @@
 <section id="projects" class="content-section">
   <div class="section-header">
     <div>
-      <p class="eyebrow section-header__eyebrow">Selected Work</p>
+      <p class="eyebrow section-header__eyebrow">Software And Research Work</p>
       <h2 class="section-header__title">Projects</h2>
     </div>
-    <p class="section-header__summary">Independent repositories plus selected work from the PLaST Lab organization.</p>
+    <p class="section-header__summary">Repositories that reflect both independent technical work and collaborative research contributions.</p>
   </div>
   {% if site.projects.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}
@@ -34,7 +34,7 @@
             <p class="eyebrow section-subheader__eyebrow">Organization Work</p>
             <h3 class="section-subheader__title">PLaST Lab Contributions</h3>
           </div>
-          <p class="section-subheader__summary">Curated repositories from the plast-lab organization that represent your collaborative research work.</p>
+          <p class="section-subheader__summary">A curated set of repositories tied to collaborative work from the PLaST Lab organization.</p>
         </div>
         <div class="card-grid">
           {% for project in plast_lab_projects %}
@@ -52,7 +52,7 @@
           <p class="eyebrow section-subheader__eyebrow">Independent Work</p>
           <h3 class="section-subheader__title">Personal Repositories</h3>
         </div>
-        <p class="section-subheader__summary">GitHub repositories published under your own account.</p>
+        <p class="section-subheader__summary">Public repositories published under your own account, excluding disabled projects.</p>
       </div>
       <div class="card-grid">
         {% for repository in filtered_repos | limit: site.projects.limit %}
