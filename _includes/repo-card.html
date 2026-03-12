@@ -1,35 +1,51 @@
+{% assign project_item = include.project | default: repository %}
+{% assign project_url = project_item.html_url | default: project_item.url %}
+{% assign project_language_data = site.data.colors[project_item.language] %}
+{% assign project_label = include.project_label | default: project_item.card_label | default: "Repository" %}
+
 <article class="github-component project-card d-flex flex-column flex-justify-between height-full text-left">
   <div>
-    <p class="project-card__type">Repository</p>
+    <p class="project-card__type">{{ project_label }}</p>
     <div class="d-flex flex-justify-between flex-items-start mb-2">
       <h3 class="project-card__title mb-0">
-        <a href="{{ repository.html_url }}">
+        <a href="{{ project_url }}">
           {% octicon repo height:20 class:"mr-2 v-align-middle" fill:"#8b5036" aria-label:repo %}
-          <span>{{ repository.name }}</span>
+          <span>{{ project_item.name }}</span>
         </a>
       </h3>
     </div>
-    <p class="project-card__description ws-normal">{{ repository.description | default: "A GitHub project from my portfolio." }}</p>
+    <p class="project-card__description ws-normal">{{ project_item.description | default: "A GitHub project from my portfolio." }}</p>
+    {% if project_item.context %}
+      <p class="project-card__context">{{ project_item.context }}</p>
+    {% endif %}
   </div>
   <div class="project-card__meta">
-    {% if repository.language %}
+    {% if project_item.organization %}
+      <span class="project-card__meta-item">{{ project_item.organization }}</span>
+    {% endif %}
+    {% if project_item.role %}
+      <span class="project-card__meta-item">{{ project_item.role }}</span>
+    {% endif %}
+    {% if project_item.language %}
       <span class="project-card__meta-item" itemprop="programmingLanguage">
-        <span class="repo-language-color ml-0 mr-1" style="background-color:{{ site.data.colors[repository.language]["color"] }}"></span>
-        <span>{{ repository.language }}</span>
+        {% if project_language_data and project_language_data.color %}
+          <span class="repo-language-color ml-0 mr-1" style="background-color:{{ project_language_data.color }}"></span>
+        {% endif %}
+        <span>{{ project_item.language }}</span>
       </span>
     {% endif %}
-    {% if repository.stargazers_count %}
-      <a href="{{ repository.html_url }}/stargazers" class="project-card__meta-item">
-        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>{{ repository.stargazers_count }}
+    {% if project_item.stargazers_count %}
+      <a href="{{ project_url }}/stargazers" class="project-card__meta-item">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>{{ project_item.stargazers_count }}
       </a>
     {% endif %}
-    {% if repository.forks_count %}
-      <a href="{{ repository.html_url }}/network/members" class="project-card__meta-item">
-        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>{{ repository.forks_count }}
+    {% if project_item.forks_count %}
+      <a href="{{ project_url }}/network/members" class="project-card__meta-item">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>{{ project_item.forks_count }}
       </a>
     {% endif %}
-    {% if repository.pushed_at %}
-      <span class="project-card__meta-item">Updated {{ repository.pushed_at | date: "%b %Y" }}</span>
+    {% if project_item.pushed_at %}
+      <span class="project-card__meta-item">Updated {{ project_item.pushed_at | date: "%b %Y" }}</span>
     {% endif %}
   </div>
 </article>

@@ -471,6 +471,40 @@ a:hover {
   margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
+.project-groups {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.project-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.section-subheader {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.section-subheader__title {
+  color: var(--ink-strong);
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  margin: 0.28rem 0 0;
+}
+
+.section-subheader__summary {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 32rem;
+  text-align: right;
+}
+
 .content-section:nth-of-type(2) {
   animation-delay: 120ms;
 }
@@ -592,6 +626,14 @@ a:hover {
 
 .project-card__description {
   min-height: 4.8rem;
+}
+
+.project-card__context {
+  color: var(--ink-faint);
+  font-size: 0.94rem;
+  margin: 0.8rem 0 0;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card__meta,
@@ -885,7 +927,17 @@ a:hover {
     flex-direction: column;
   }
 
+  .section-subheader {
+    align-items: start;
+    flex-direction: column;
+  }
+
   .section-header__summary {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .section-subheader__summary {
     max-width: 100%;
     text-align: left;
   }

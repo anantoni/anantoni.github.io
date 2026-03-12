@@ -4,9 +4,8 @@
       <p class="eyebrow section-header__eyebrow">Selected Work</p>
       <h2 class="section-header__title">Projects</h2>
     </div>
-    <p class="section-header__summary">Repositories, tools, and technical work that sit alongside the reporting.</p>
+    <p class="section-header__summary">Independent repositories plus selected work from the PLaST Lab organization.</p>
   </div>
-  <div class="card-grid">
   {% if site.projects.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}
   {% else %}
@@ -23,12 +22,45 @@
     {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
   {% endif %}
 
-  {% for repository in filtered_repos | limit: site.projects.limit %}
-    {% unless site.projects.exclude.projects contains repository.name %}
-      <div class="card-grid__item">
-        {% include repo-card.html %}
+  {% assign plast_lab_projects = site.data.plast_lab_projects %}
+
+  <div class="project-groups">
+    {% if plast_lab_projects and plast_lab_projects.size > 0 %}
+      <div class="project-group">
+        <div class="section-subheader">
+          <div>
+            <p class="eyebrow section-subheader__eyebrow">Organization Work</p>
+            <h3 class="section-subheader__title">PLaST Lab Contributions</h3>
+          </div>
+          <p class="section-subheader__summary">Curated repositories from the plast-lab organization that represent your collaborative research work.</p>
+        </div>
+        <div class="card-grid">
+          {% for project in plast_lab_projects %}
+            <div class="card-grid__item">
+              {% include repo-card.html project=project project_label="Contribution" %}
+            </div>
+          {% endfor %}
+        </div>
       </div>
-    {% endunless %}
-  {% endfor %}
+    {% endif %}
+
+    <div class="project-group">
+      <div class="section-subheader">
+        <div>
+          <p class="eyebrow section-subheader__eyebrow">Independent Work</p>
+          <h3 class="section-subheader__title">Personal Repositories</h3>
+        </div>
+        <p class="section-subheader__summary">GitHub repositories published under your own account.</p>
+      </div>
+      <div class="card-grid">
+        {% for repository in filtered_repos | limit: site.projects.limit %}
+          {% unless site.projects.exclude.projects contains repository.name %}
+            <div class="card-grid__item">
+              {% include repo-card.html %}
+            </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
