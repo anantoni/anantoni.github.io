@@ -119,34 +119,6 @@ publications:
     authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
     note: Work on scaling declarative program analysis by controlling combinatorial explosion without collapsing precision.
     url: https://doi.org/10.1145/3729255
-  - year: 2023
-    venue: ICACS
-    type: Conference paper
-    title: "Benchmarking Classifiers for Loan Default Prediction using Archetypal Analysis"
-    authors: Giorgos Chondroulis, Jakub M. Ardanuy, Anastasios Antoniadis, and Sotirios Chatzis
-    note: Comparative work on loan-default prediction and classifier evaluation using archetypal analysis.
-    url: https://doi.org/10.1007/978-3-031-58379-0_18
-  - year: 2022
-    venue: Cyprus University of Technology
-    type: Thesis
-    title: "Information-Theoretic Local Competition and Stochasticity for Deep Learning"
-    authors: Anastasios Antoniadis
-    note: Thesis work on diversified representations, stochasticity, and local competition in deep learning.
-    url: https://ktisis.cut.ac.cy/handle/20.500.14279/31465
-  - year: 2022
-    venue: AAAI
-    type: Conference paper
-    title: "Competing Mutual Information Constraints with Stochastic Competition-Based Activations for Learning Diversified Representations"
-    authors: Konstantinos P. Panousis, Anastasios Antoniadis, and Sotirios Chatzis
-    note: Representation-learning work centered on competing mutual-information objectives and competition-based activations.
-    url: https://doi.org/10.1609/aaai.v36i11.21583
-  - year: 2021
-    venue: MEDPOWER
-    type: Conference paper
-    title: "A Bayesian Optimization Approach for the Robust Unit Commitment of Identical Generating Units"
-    authors: Pavlos Nikolaidis, Anastasios Antoniadis, and Sotirios P. Chatzis
-    note: Optimization work on robust unit commitment for identical generating units under uncertainty.
-    url: https://doi.org/10.1049/icp.2021.1224
   - year: 2020
     venue: ECOOP
     type: Research paper
