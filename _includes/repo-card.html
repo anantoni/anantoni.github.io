@@ -1,7 +1,24 @@
-{% assign project_item = include.project | default: repository %}
-{% assign project_url = project_item.html_url | default: project_item.url %}
-{% assign project_language_data = site.data.colors[project_item.language] %}
-{% assign project_label = include.project_label | default: project_item.card_label | default: "Repository" %}
+{% if include.project %}
+  {% assign project_item = include.project %}
+  {% assign project_label = include.project_label | default: "Contribution" %}
+{% else %}
+  {% assign project_item = repository %}
+  {% assign project_label = "Repository" %}
+{% endif %}
+
+{% if project_item.html_url %}
+  {% assign project_url = project_item.html_url %}
+{% else %}
+  {% assign project_url = project_item.url %}
+{% endif %}
+
+{% assign language_color = nil %}
+{% if project_item.language %}
+  {% assign project_language_data = site.data.colors[project_item.language] %}
+  {% if project_language_data %}
+    {% assign language_color = project_language_data.color %}
+  {% endif %}
+{% endif %}
 
 <article class="github-component project-card d-flex flex-column flex-justify-between height-full text-left">
   <div>
@@ -28,8 +45,8 @@
     {% endif %}
     {% if project_item.language %}
       <span class="project-card__meta-item" itemprop="programmingLanguage">
-        {% if project_language_data and project_language_data.color %}
-          <span class="repo-language-color ml-0 mr-1" style="background-color:{{ project_language_data.color }}"></span>
+        {% if language_color %}
+          <span class="repo-language-color ml-0 mr-1" style="background-color:{{ language_color }}"></span>
         {% endif %}
         <span>{{ project_item.language }}</span>
       </span>

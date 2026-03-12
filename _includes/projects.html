@@ -12,14 +12,16 @@
     {% assign sort_order = 'pushed_at' %}
   {% endif %}
 
+  {% assign visible_repos = site.github.public_repositories | where:'disabled', false %}
+
   {% if site.projects.exclude.archived && site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
+    {% assign filtered_repos = visible_repos | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
   {% elsif site.projects.exclude.archived %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | sort: sort_order | reverse %}
+    {% assign filtered_repos = visible_repos | where:'archived', false | sort: sort_order | reverse %}
   {% elsif site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'fork', false | sort: sort_order | reverse %}
+    {% assign filtered_repos = visible_repos | where:'fork', false | sort: sort_order | reverse %}
   {% else %}
-    {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
+    {% assign filtered_repos = visible_repos | sort: sort_order | reverse %}
   {% endif %}
 
   {% assign plast_lab_projects = site.data.plast_lab_projects %}
