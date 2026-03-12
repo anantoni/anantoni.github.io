@@ -1,4 +1,4 @@
-<!-- <section id="projects" class="content-section">
+<section id="projects" class="content-section">
   <div class="section-header">
     <div>
       <p class="eyebrow section-header__eyebrow">Software And Research Work</p>
@@ -6,25 +6,9 @@
     </div>
     <p class="section-header__summary">Repositories that reflect both independent technical work and collaborative research contributions.</p>
   </div>
-  {% if site.projects.sort_by == 'stars' %}
-    {% assign sort_order = 'stargazers_count', 'last' %}
-  {% else %}
-    {% assign sort_order = 'pushed_at' %}
-  {% endif %}
-
-  {% assign visible_repos = site.github.public_repositories | where:'disabled', false %}
-
-  {% if site.projects.exclude.archived && site.projects.exclude.forks %}
-    {% assign filtered_repos = visible_repos | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.archived %}
-    {% assign filtered_repos = visible_repos | where:'archived', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.forks %}
-    {% assign filtered_repos = visible_repos | where:'fork', false | sort: sort_order | reverse %}
-  {% else %}
-    {% assign filtered_repos = visible_repos | sort: sort_order | reverse %}
-  {% endif %}
-
   {% assign plast_lab_projects = site.data.plast_lab_projects %}
+  {% assign personal_projects = site.data.personal_projects %}
+  {% assign excluded_projects = site.projects.exclude.projects %}
 
   <div class="project-groups">
     {% if plast_lab_projects and plast_lab_projects.size > 0 %}
@@ -50,19 +34,27 @@
       <div class="section-subheader">
         <div>
           <p class="eyebrow section-subheader__eyebrow">Independent Work</p>
-          <h3 class="section-subheader__title">Personal Repositories</h3>
+          <h3 class="section-subheader__title">Selected Personal Repositories</h3>
         </div>
-        <p class="section-subheader__summary">Public repositories published under your own account, excluding disabled projects.</p>
+        <p class="section-subheader__summary">A curated set of personal repositories, listed manually so blocked GitHub metadata cannot break the build.</p>
       </div>
-      <div class="card-grid">
-        {% for repository in filtered_repos | limit: site.projects.limit %}
-          {% unless site.projects.exclude.projects contains repository.name %}
-            <div class="card-grid__item">
-              {% include repo-card.html %}
-            </div>
-          {% endunless %}
-        {% endfor %}
-      </div>
+      {% if personal_projects and personal_projects.size > 0 %}
+        <div class="card-grid">
+          {% for project in personal_projects limit: site.projects.limit %}
+            {% assign is_excluded = false %}
+            {% if excluded_projects and excluded_projects contains project.name %}
+              {% assign is_excluded = true %}
+            {% endif %}
+            {% unless is_excluded %}
+              <div class="card-grid__item">
+                {% include repo-card.html project=project project_label="Repository" %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="project-group__summary">Add entries to <code>_data/personal_projects.yml</code> to show selected personal repositories here.</p>
+      {% endif %}
     </div>
   </div>
-</section> -->
+</section>

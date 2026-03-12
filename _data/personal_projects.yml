@@ -1,0 +1,15 @@
+- name: anantoni.github.io
+  html_url: https://github.com/anantoni/anantoni.github.io
+  description: Personal website and writing portfolio built on GitHub Pages.
+  language: HTML
+  organization: Independent
+  role: Maintainer
+  context: The site you are reading now, customized into a portfolio for journalism, research, and technical writing.
+
+- name: iris-example
+  html_url: https://github.com/anantoni/iris-example
+  description: IRIS Reasoner - Program Analysis Sample.
+  language: Java
+  organization: Independent
+  role: Maintainer
+  context: Example code for building program-analysis workflows on top of IRIS and Datalog-based reasoning.
