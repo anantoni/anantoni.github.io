@@ -47,21 +47,3 @@ social_media:
   # website: https://anantoni.net/
   # youtube: your_username
 
-topics:
-  - name: AI Economics
-    description: Incentives, business models, and labor dynamics around AI systems.
-
-  - name: Static Analysis
-    description: Precise and scalable program analysis for large software systems.
-
-  - name: Platform Governance
-    description: The institutions, policies, and market power behind digital platforms.
-
-  - name: Software Infrastructure
-    description: The technical layers that underpin reliability, scale, and organizational dependence.
-
-  - name: Digital Culture
-    description: How technical products reshape communities, media, and everyday life online.
-
-  - name: Investigative Reporting
-    description: Evidence-driven reporting on technology companies, narratives, and power.
