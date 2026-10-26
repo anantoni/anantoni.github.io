@@ -5,125 +5,31 @@ layout: home
 
 <section class="hero-panel">
   <div class="hero-panel__copy">
-    <p class="eyebrow">{{ profile.eyebrow }}</p>
     <h1 class="hero-panel__title">{{ profile.headline }}</h1>
-    <p class="hero-panel__lede">{{ profile.hero_intro }}</p>
-  </div>
-
-  <div class="hero-panel__rail">
-    {% for stat in profile.hero_stats %}
-      <div class="hero-stat">
-        <span class="hero-stat__value">{{ stat.label }}</span>
-        <span class="hero-stat__label">{{ stat.value }}</span>
-      </div>
-    {% endfor %}
+    <p class="hero-panel__lede">{{ profile.intro }}</p>
   </div>
 </section>
 
-<section id="about" class="story-grid">
-  <article class="story-card story-card--wide">
-    <p class="story-card__eyebrow">About</p>
-    <h2 class="story-card__title">Technical depth without the corporate varnish.</h2>
+<section id="about" class="content-section">
+  <div class="section-header">
+    <h2 class="section-header__title">About</h2>
+  </div>
+  <article class="story-card story-card--full">
     {% for paragraph in profile.bio_paragraphs %}
       <p class="story-card__body">{{ paragraph }}</p>
     {% endfor %}
-  </article>
-
-  <article class="story-card">
-    <p class="story-card__eyebrow">At A Glance</p>
-    <div class="fact-list">
-      {% for fact in profile.quick_facts %}
-        <div class="fact-item">
-          <span class="fact-item__label">{{ fact.label }}</span>
-          <span class="fact-item__value">{{ fact.value }}</span>
-        </div>
+    <p class="story-card__eyebrow">Focus</p>
+    <ul class="chip-list">
+      {% for area in profile.focus %}
+        <li>{{ area }}</li>
       {% endfor %}
-    </div>
+    </ul>
   </article>
-
-  <article class="story-card">
-    <p class="story-card__eyebrow">Current Affiliations</p>
-    <div class="link-stack">
-      {% for affiliation in profile.affiliations %}
-        <a href="{{ affiliation.url }}" class="link-stack__item">
-          <span class="link-stack__title">{{ affiliation.name }}</span>
-          <span class="link-stack__meta">{{ affiliation.role }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </article>
-
-  {% if profile.past_affiliations %}
-    <article class="story-card">
-      <p class="story-card__eyebrow">Previous Affiliations</p>
-      <div class="link-stack">
-        {% for affiliation in profile.past_affiliations %}
-          <a href="{{ affiliation.url }}" class="link-stack__item">
-            <span class="link-stack__title">{{ affiliation.name }}</span>
-            <span class="link-stack__meta">{{ affiliation.role }}</span>
-          </a>
-        {% endfor %}
-      </div>
-    </article>
-  {% endif %}
-
-  <article class="story-card">
-    <p class="story-card__eyebrow">Editorial Principles</p>
-    <div class="principle-list">
-      {% for principle in profile.principles %}
-        <div class="principle-item">
-          <h3 class="principle-item__title">{{ principle.title }}</h3>
-          <p class="principle-item__body">{{ principle.description }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </article>
-
-  <article class="story-card story-card--quote">
-    <p class="story-card__quote">
-      Too much technology coverage is buried under jargon or distorted by public relations. I try to translate difficult subjects without dumbing them down.
-    </p>
-  </article>
-
-  <article class="story-card">
-    <p class="story-card__eyebrow">Publishing Projects</p>
-    <div class="link-stack">
-      {% for outlet in profile.outlets %}
-        <a href="{{ outlet.url }}" class="link-stack__item">
-          <span class="link-stack__title">{{ outlet.name }}</span>
-          <span class="link-stack__meta">{{ outlet.role }} · {{ outlet.note }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </article>
-</section>
-
-<section id="focus" class="content-section">
-  <div class="section-header">
-    <div>
-      <p class="eyebrow section-header__eyebrow">Reporting And Research</p>
-      <h2 class="section-header__title">Focus Areas</h2>
-    </div>
-    <p class="section-header__summary">The recurring themes that connect the journalism, technical work, and long-form criticism.</p>
-  </div>
-  <div class="signal-grid">
-    {% for area in profile.focus_areas %}
-      <article class="signal-card">
-        <p class="signal-card__eyebrow">{{ forloop.index | prepend: "0" }}</p>
-        <h3 class="signal-card__title">{{ area.title }}</h3>
-        <p class="signal-card__body">{{ area.description }}</p>
-      </article>
-    {% endfor %}
-  </div>
 </section>
 
 <section id="experience" class="content-section">
   <div class="section-header">
-    <div>
-      <p class="eyebrow section-header__eyebrow">Background</p>
-      <h2 class="section-header__title">Experience</h2>
-    </div>
-    <p class="section-header__summary">Research, publishing, and technical work across academia, industry, and independent writing.</p>
+    <h2 class="section-header__title">Experience</h2>
   </div>
   <div class="timeline">
     {% for entry in profile.experience %}
@@ -148,21 +54,16 @@ layout: home
 
 <section id="publications" class="content-section">
   <div class="section-header">
-    <div>
-      <p class="eyebrow section-header__eyebrow">Selected Research</p>
-      <h2 class="section-header__title">Publications</h2>
-    </div>
-    <p class="section-header__summary">Published work across program analysis, machine learning, and adjacent technical research.</p>
+    <h2 class="section-header__title">Publications</h2>
   </div>
   <div class="publication-grid">
     {% for publication in profile.publications %}
-      <article class="publication-card">
+      <article class="publication-card publication-card--row">
         <div class="publication-card__meta">
-          <span>{{ publication.venue }}</span>
+          <span>{{ publication.venue }} {{ publication.year }}</span>
           {% if publication.type %}
             <span>{{ publication.type }}</span>
           {% endif %}
-          <span>{{ publication.year }}</span>
         </div>
         {% if publication.url %}
           <h3 class="publication-card__title"><a href="{{ publication.url }}">{{ publication.title }}</a></h3>

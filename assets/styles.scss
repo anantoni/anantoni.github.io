@@ -1396,3 +1396,34 @@ a:hover {
     transform: translateY(0);
   }
 }
+
+.story-card--full {
+  grid-column: 1 / -1;
+}
+
+.story-card .chip-list {
+  margin-top: -0.25rem;
+}
+
+.publication-card--row {
+  grid-column: 1 / -1;
+}
+
+.hero-panel__title {
+  max-width: 16ch;
+}
+
+.story-card--full {
+  min-height: auto;
+}
+
+.card-grid__item {
+  display: flex;
+}
+
+.card-grid__item > .project-card,
+.card-grid__item > .post-card {
+  flex: 1;
+  height: auto !important;
+  min-height: 0;
+}

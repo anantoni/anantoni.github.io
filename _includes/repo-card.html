@@ -22,7 +22,6 @@
 
 <article class="github-component project-card d-flex flex-column flex-justify-between height-full text-left">
   <div>
-    <p class="project-card__type">{{ project_label }}</p>
     <div class="d-flex flex-justify-between flex-items-start mb-2">
       <h3 class="project-card__title mb-0">
         <a href="{{ project_url }}">
@@ -32,18 +31,9 @@
       </h3>
     </div>
     <p class="project-card__description ws-normal">{{ project_item.description | default: "A GitHub project from my portfolio." }}</p>
-    {% if project_item.context %}
-      <p class="project-card__context">{{ project_item.context }}</p>
-    {% endif %}
   </div>
   <div class="project-card__footer">
     <div class="project-card__meta">
-      {% if project_item.organization %}
-        <span class="project-card__meta-item">{{ project_item.organization }}</span>
-      {% endif %}
-      {% if project_item.role %}
-        <span class="project-card__meta-item">{{ project_item.role }}</span>
-      {% endif %}
       {% if project_item.language %}
         <span class="project-card__meta-item" itemprop="programmingLanguage">
           {% if language_color %}

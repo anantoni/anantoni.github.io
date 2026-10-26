@@ -1,79 +1,28 @@
 name: Anastasios Antoniadis
-eyebrow: PhD researcher / Investigative journalist / technical writer
+eyebrow: PhD researcher, investigative journalist, technical writer
 headline: I investigate technology as infrastructure, business, and power.
+intro: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
 meta_description: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher based in Greece, covering AI, software systems, platform power, and digital culture.
-sidebar_bio: Based in Greece, I work across investigative reporting, long-form criticism, research, and technical writing, with a focus on AI, software systems, platform power, and digital culture.
-hero_intro: "Based in Greece, I work at the intersection of technology, artificial intelligence, software engineering, business, and digital culture. The aim is consistent across all of it: look past hype, identify what is actually happening, and explain why it matters."
+sidebar_bio: Journalist, writer, and PhD researcher in Athens, Greece.
 author_note: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher whose work connects technical expertise with public understanding.
-footer_note: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
-
-hero_stats:
-  - label: Journalism
-    value: Investigations, criticism, and explainers grounded in technical detail.
-  - label: Research
-    value: Static analysis, large-scale software systems, and practical precision.
-  - label: Coverage
-    value: AI economics, platform governance, digital labor, and software infrastructure.
-
-quick_facts:
-  - label: Based in
-    value: Greece
-  - label: Works across
-    value: Journalism, research, criticism, and technical writing
-  - label: Academic base
-    value: University of Athens, Department of Informatics and Telecommunications
-  - label: Research group
-    value: PLaST
-  - label: Publishing projects
-    value: BORDERPOLAR
-  - label: Prior affiliations
-    value: Oracle Labs Australia and CERN
 
 bio_paragraphs:
-  - "I am an investigative journalist, writer, and researcher working on the political economy of technology. My reporting focuses on the systems behind the slogans: AI as an economic and social force, software as infrastructure, and platforms as institutions that shape labor, markets, and public life."
-  - Alongside journalism and long-form writing, I am a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens, where I began doctoral work in October 2016 under the supervision of Yannis Smaragdakis. I am also a member of the PLaST research group. My academic work has centered on static analysis of Java programs, large-scale software systems, and the practical challenge of making precise program analysis scale.
-  - That technical background informs the editorial work. I move between research, criticism, and public writing to explain complex technical subjects without flattening them into marketing. Much of the work is about replacing narrative laundering with evidence, analysis, and clarity.
-  - Outside academic publishing, I am the creator and writer behind BORDERPOLAR, a publishing project focused on technology, games, digital culture, and guides written with an emphasis on technical substance and readability.
+  - "I am an investigative journalist and writer working on the political economy of technology: AI as an economic and social force, software as infrastructure, and platforms as institutions that shape labor, markets, and public life. I look past hype and public relations to what is actually happening, and explain complex technical subjects with evidence, without jargon and without dumbing them down."
+  - I am also a PhD researcher in the Department of Informatics and Telecommunications at the University of Athens, supervised by Yannis Smaragdakis since October 2016, and a member of the PLaST research group (programming languages and software technologies). My research is on static analysis of Java programs and on making precise program analysis scale to large software systems.
 
-affiliations:
-  - name: University of Athens
-    role: PhD researcher, Department of Informatics and Telecommunications
-    url: https://www.di.uoa.gr/
-  - name: PLaST Research Group
-    role: Member, programming languages and software technologies
-    url: https://plast-lab.github.io/
-
-past_affiliations:
-  - name: Oracle Labs Australia
-    role: Research assistant, 2019
-    url: https://labs.oracle.com/
-  - name: CERN
-    role: Intern, 2012 - 2013
-    url: https://home.cern/
+focus:
+  - AI economics
+  - Platform governance
+  - Software infrastructure
+  - Static analysis
+  - Digital culture
+  - Investigative reporting
 
 outlets:
   - name: BORDERPOLAR
     role: Creator and writer
     url: https://borderpolar.com/
-    note: Essays, reporting, criticism, and commentary across technology, games, and digital culture.
-
-focus_areas:
-  - title: AI economics
-    description: Incentives, labor relations, market concentration, and the business logic driving contemporary AI systems.
-  - title: Software infrastructure
-    description: The technical layers that quietly shape reliability, dependency, security, and institutional power.
-  - title: Platform governance
-    description: How firms, interfaces, and policy regimes structure control over digital markets and public discourse.
-  - title: Program analysis
-    description: Static analysis of Java and the engineering tradeoffs involved in precise, scalable analysis at real-world size.
-
-principles:
-  - title: Evidence over spectacle
-    description: Technology is easier to understand once investor theater and launch-event mythology are stripped away.
-  - title: Technical depth for public readers
-    description: Complex systems deserve careful explanation, not buzzwords or condescension.
-  - title: Institutions matter
-    description: I focus on incentives, governance, and the organizations behind technical systems, not just the products themselves.
+    note: Essays, reporting, criticism, guides, and commentary on technology, games, and digital culture.
 
 experience:
   - period: Since Oct. 2016
@@ -86,13 +35,13 @@ experience:
     title: Software engineer
     organization: Satways Ltd.
     location: Athens, Greece
-    description: Ecliplse RCP software development and Elastic Stack development for log management and analysis.
+    description: Eclipse RCP software development and Elastic Stack development for log management and analysis.
     url: https://www.satways.net/
   - period: 2019
     title: Research assistant
     organization: Oracle Labs Australia
     location: Brisbane, Australia
-    description: Worked on research related to enterprise Java analysis and the engineering constraints of program analysis in practice.
+    description: Research on enterprise Java analysis and the engineering constraints of program analysis in practice.
     url: https://labs.oracle.com/
   - period: 2014 - 2016
     title: Research assistant
@@ -104,14 +53,8 @@ experience:
     title: Intern
     organization: CERN
     location: Geneva, Switzerland
-    description: Early research and engineering experience inside a large international scientific institution.
+    description: Early research and engineering experience at a large international scientific institution.
     url: https://home.cern/
-  - period: Ongoing
-    title: Independent publishing, writing, and research
-    organization: BORDERPOLAR
-    location: Online
-    description: Essays, explainers, and commentary spanning technology, criticism, culture, and adjacent digital subjects.
-    url: https://borderpolar.com/
 
 publications:
   - year: 2025
@@ -119,33 +62,33 @@ publications:
     type: Research paper
     title: "Universal Scalability in Declarative Program Analysis (with Choice-Based Combination Pruning)"
     authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
-    note: Work on scaling declarative program analysis by controlling combinatorial explosion with minimal completeness loss.
+    note: Scaling declarative program analysis by controlling combinatorial explosion with minimal completeness loss.
     url: https://dl.acm.org/doi/10.1145/3763129
   - year: 2020
     venue: ECOOP
     type: Research paper
     title: "Static Analysis of Shape in TensorFlow Programs"
     authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
-    note: Static analysis work for reasoning about tensor shapes in TensorFlow programs.
+    note: Reasoning statically about tensor shapes in TensorFlow programs.
     url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2020.15
   - year: 2020
     venue: PLDI
     type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
     authors: Anastasios Antoniadis, Nikos Filippakis, Paddy Krishnan, Raghavendra Ramesh, Nicholas Allen, and Yannis Smaragdakis
-    note: Research on Java enterprise application analysis and the framework and cachebehavior that dominates precision, completeness, and scalability.
+    note: Research on Java enterprise application analysis and the framework and cache behavior that dominate precision, completeness, and scalability.
     url: https://dl.acm.org/doi/10.1145/3385412.3386026
   - year: 2018
     venue: ECOOP/ISSTA Doctoral Symposium
     type: Doctoral symposium paper
     title: "Two-phase Analysis for Precision and Scalability"
     authors: Anastasios Antoniadis
-    note: Doctoral symposium work on managing the tradeoff between precision and scalability in static analysis.
+    note: Managing the tradeoff between precision and scalability in static analysis.
     url: https://2018.ecoop.org/details/ecoop-issta-2018-doctoral-symposium/9/Two-phase-Analysis-for-Precision-and-Scalability
   - year: 2017
     venue: SOAP
     type: Workshop paper
     title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
     authors: Tony Antoniadis, Konstantinos Triantafyllou, and Yannis Smaragdakis
-    note: Work on portability and engineering tradeoffs in Datalog-based program analysis.
+    note: Portability and engineering tradeoffs in Datalog-based program analysis.
     url: https://dl.acm.org/doi/10.1145/3088515.3088522

@@ -20,28 +20,6 @@
     <p class="masthead__bio">{{ person_bio }}</p>
   </div>
 
-  {% if profile.quick_facts %}
-    <div class="masthead__signal-list">
-      {% for fact in profile.quick_facts limit: 3 %}
-        <div class="masthead__signal">
-          <span class="masthead__signal-label">{{ fact.label }}</span>
-          <span class="masthead__signal-value">{{ fact.value }}</span>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {% if profile.affiliations %}
-    <div class="masthead__affiliations">
-      {% for affiliation in profile.affiliations %}
-        <a href="{{ affiliation.url }}" class="masthead__affiliation">
-          <span class="masthead__affiliation-role">{{ affiliation.role }}</span>
-          <span class="masthead__affiliation-name">{{ affiliation.name }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  {% endif %}
-
   {% if include.metadata %}
     <div class="masthead__meta">
       {% if user.login %}
@@ -82,7 +60,6 @@
 
     <nav class="masthead__nav" aria-label="Site sections">
       <a href="{{ '/' | relative_url }}#about" class="masthead__nav-link">About</a>
-      <a href="{{ '/' | relative_url }}#focus" class="masthead__nav-link">Focus</a>
       <a href="{{ '/' | relative_url }}#experience" class="masthead__nav-link">Experience</a>
       <a href="{{ '/' | relative_url }}#publications" class="masthead__nav-link">Publications</a>
       <a href="{{ '/' | relative_url }}#projects" class="masthead__nav-link">Projects</a>
