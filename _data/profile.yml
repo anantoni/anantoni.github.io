@@ -1,9 +1,9 @@
 name: Anastasios Antoniadis
-eyebrow: PhD researcher, investigative journalist, technical writer
+eyebrow: Senior software engineer, PhD researcher, writer
 headline: I investigate technology as infrastructure, business, and power.
 intro: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
-meta_description: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher based in Greece, covering AI, software systems, platform power, and digital culture.
-sidebar_bio: Journalist, writer, and PhD researcher in Athens, Greece.
+meta_description: Anastasios Antoniadis is a senior software engineer, PhD researcher and writer based in Greece, founder of Lore Armory, covering AI, software systems, platform power, and digital culture.
+sidebar_bio: Senior software engineer, PhD researcher and writer in Athens, Greece. Founder of Lore Armory.
 author_note: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher whose work connects technical expertise with public understanding.
 
 bio_paragraphs:
@@ -19,6 +19,10 @@ focus:
   - Investigative reporting
 
 outlets:
+  - name: Lore Armory
+    role: Founder
+    url: https://lorearmory.com/
+    note: A data-driven game wiki with interactive maps, calculators, planners and checklists for RPGs and soulslikes.
   - name: BORDERPOLAR
     role: Creator and writer
     url: https://borderpolar.com/
