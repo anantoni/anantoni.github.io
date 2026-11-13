@@ -74,6 +74,9 @@ layout: home
           <p class="publication-card__authors">{{ publication.authors }}</p>
         {% endif %}
         <p class="publication-card__note">{{ publication.note }}</p>
+        {% if publication.links %}
+          <p class="publication-card__links">{% for link in publication.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+        {% endif %}
       </article>
     {% endfor %}
   </div>
