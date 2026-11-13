@@ -64,9 +64,9 @@ publications:
   - year: 2026
     venue: Zenodo
     type: Technical note + dataset
-    title: "How Palworld computes Pal Attack, Defense and HP: an exact model verified in game"
+    title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
     authors: Anastasios Antoniadis (Lore Armory)
-    note: Reproducible game research. An exact model of Palworld's stat calculation, checked in game against 2,400 stat values with predictions frozen before each check.
+    note: Technical note v3.1 (13 Nov 2026). Across 2,322 stat values the model matches the game exactly; the confirmation runs were predicted and hashed (sha256) before the in-game check. Covers IVs, level, stars, Souls, trust, awakening, passives, food and hunger, emblems, partner skills and Level Sync.
     url: https://doi.org/10.5281/zenodo.24189999
     links:
       - label: Paper (DOI)
@@ -75,6 +75,8 @@ publications:
         url: https://doi.org/10.5281/zenodo.24190003
       - label: Calculator
         url: https://lorearmory.com/palworld/iv-calculator/
+      - label: Code (save reader v1.0.0)
+        url: https://github.com/anantoni/palworld-save-decoder/releases/tag/v1.0.0
   - year: 2025
     venue: PACMPL / OOPSLA
     type: Research paper
