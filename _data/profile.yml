@@ -1,8 +1,9 @@
 name: Anastasios Antoniadis
-eyebrow: Senior software engineer, PhD researcher, writer
+eyebrow: Researcher · PhD student, University of Athens · Founder, Lore Armory
+meta_title: Anastasios Antoniadis - Researcher and PhD student, University of Athens
 headline: I investigate technology as infrastructure, business, and power.
 intro: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
-meta_description: Anastasios Antoniadis is a senior software engineer, PhD researcher and writer based in Greece, founder of Lore Armory, covering AI, software systems, platform power, and digital culture.
+meta_description: Anastasios Antoniadis is a researcher and PhD student at the University of Athens (static program analysis) and founder of Lore Armory. He writes about technology as infrastructure, business and power.
 sidebar_bio: Senior software engineer, PhD researcher and writer in Athens, Greece. Founder of Lore Armory.
 author_note: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher whose work connects technical expertise with public understanding.
 
@@ -29,36 +30,47 @@ outlets:
     note: Essays, reporting, criticism, guides, and commentary on technology, games, and digital culture.
 
 experience:
-  - period: Since Oct. 2016
-    title: PhD researcher
+  - period: Oct 2014 - Dec 2020, May 2024 - present
+    title: Software Engineer and Research Assistant, PLaST group
     organization: University of Athens
     location: Athens, Greece
-    description: Doctoral research on static analysis of Java programs, enterprise software, and the scalability limits of precise program analysis.
+    description: Static analysis tooling (parallel extraction from Java bytecode, a web viewer for analysis results, porting the group's Java bytecode analysis framework to a new Datalog engine) and research on the scalability and completeness of points-to analysis for Java enterprise applications.
     url: https://www.di.uoa.gr/
-  - period: 2023
-    title: Software engineer
-    organization: Satways Ltd.
+  - period: Mar 2023 - Oct 2023
+    title: Software Engineer
+    organization: Satways Ltd
     location: Athens, Greece
-    description: Eclipse RCP software development and Elastic Stack development for log management and analysis.
+    description: "Eclipse RCP desktop application work and Elastic Stack logging."
     url: https://www.satways.net/
-  - period: 2019
-    title: Research assistant
+  - period: Jan 2021 - Jan 2023
+    title: "Developer, SEO and Blog Manager"
+    organization: Cyvox OU
+    location: Tallinn, Estonia
+    description: "Founded and ran BORDERPOLAR, a tech and gaming website; built its WordPress platform and small JavaScript puzzle tools."
+    url: https://borderpolar.com/
+  - period: Feb 2019 - Jul 2019
+    title: "Research Intern"
     organization: Oracle Labs Australia
     location: Brisbane, Australia
-    description: Research on enterprise Java analysis and the engineering constraints of program analysis in practice.
+    description: "Improving the completeness of static analysis of Java enterprise applications using heap snapshots."
     url: https://labs.oracle.com/
-  - period: 2014 - 2016
-    title: Research assistant
-    organization: University of Athens
-    location: Athens, Greece
-    description: Research on static analysis of Java programs.
-    url: https://www.di.uoa.gr/
-  - period: 2012 - 2013
-    title: Intern
+  - period: Oct 2012 - Oct 2013
+    title: "Technical Student, PH-CMG-PS"
     organization: CERN
     location: Geneva, Switzerland
-    description: Early research and engineering experience at a large international scientific institution.
+    description: "Physics analysis framework development, dataset production and database management."
     url: https://home.cern/
+
+education:
+  - period: 2016 - on hold
+    title: "PhD, Static Program Analysis"
+    detail: "University of Athens, Department of Informatics and Telecommunications. Advisor: Prof. Yannis Smaragdakis."
+  - period: 2015 - 2016
+    title: "MSc, Computing Systems"
+    detail: "University of Athens. Grade 10/10, valedictorian."
+  - period: 2006 - 2014
+    title: "BSc, Computer Science"
+    detail: "University of Athens. Grade 8.51/10, salutatorian."
 
 publications:
   - year: 2026
