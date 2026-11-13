@@ -1,9 +1,9 @@
 name: Anastasios Antoniadis
-eyebrow: Researcher · PhD student, University of Athens · Founder, Lore Armory
-meta_title: Anastasios Antoniadis - Researcher and PhD student, University of Athens
+eyebrow: Researcher · PhD candidate, University of Athens · Founder, Lore Armory
+meta_title: Anastasios Antoniadis - Researcher and PhD candidate, University of Athens
 headline: I investigate technology as infrastructure, business, and power.
 intro: Reporting, research, and technical writing on AI, software systems, platform power, and digital culture.
-meta_description: Anastasios Antoniadis is a researcher and PhD student at the University of Athens (static program analysis) and founder of Lore Armory. He writes about technology as infrastructure, business and power.
+meta_description: Anastasios Antoniadis is a researcher and PhD candidate at the University of Athens (static program analysis) and founder of Lore Armory. He writes about technology as infrastructure, business and power.
 sidebar_bio: Senior software engineer, PhD researcher and writer in Athens, Greece. Founder of Lore Armory.
 author_note: Anastasios Antoniadis is an investigative journalist, writer, and PhD researcher whose work connects technical expertise with public understanding.
 
@@ -62,7 +62,7 @@ experience:
     url: https://home.cern/
 
 education:
-  - period: 2016 - on hold
+  - period: 2016-present
     title: "PhD, Static Program Analysis"
     detail: "University of Athens, Department of Informatics and Telecommunications. Advisor: Prof. Yannis Smaragdakis."
   - period: 2015 - 2016
