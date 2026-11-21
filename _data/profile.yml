@@ -87,8 +87,14 @@ publications:
         url: https://doi.org/10.5281/zenodo.24190003
       - label: Calculator
         url: https://sourcemined.com/palworld/iv-calculator/
-      - label: Code (save reader v1.0.0)
-        url: https://github.com/anantoni/palworld-save-decoder/releases/tag/v1.0.0
+      - label: Save reader (GitHub)
+        url: https://github.com/anantoni/palworld-save-decoder
+      - label: Save reader (npm)
+        url: https://www.npmjs.com/package/palworld-save-decoder
+      - label: Mermaid decompressor (GitHub)
+        url: https://github.com/anantoni/mermaid-decompress
+      - label: Mermaid decompressor (npm)
+        url: https://www.npmjs.com/package/mermaid-decompress
   - year: 2025
     venue: PACMPL / OOPSLA
     type: Research paper
