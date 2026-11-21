@@ -20,7 +20,7 @@ focus:
   - Investigative reporting
 
 outlets:
-  - name: Lore Armory
+  - name: Sourcemined
     role: Founder
     url: https://sourcemined.com/
     note: A data-driven game wiki with interactive maps, calculators, planners and checklists for RPGs and soulslikes.
@@ -77,7 +77,7 @@ publications:
     venue: Zenodo
     type: Technical note + dataset
     title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
-    authors: Anastasios Antoniadis (Lore Armory)
+    authors: Anastasios Antoniadis (Sourcemined)
     note: Technical note v3.1 (13 Nov 2026). Across 2,322 stat values the model matches the game exactly; the confirmation runs were predicted and hashed (sha256) before the in-game check. Covers IVs, level, stars, Souls, trust, awakening, passives, food and hunger, emblems, partner skills and Level Sync.
     url: https://doi.org/10.5281/zenodo.24189999
     links:
