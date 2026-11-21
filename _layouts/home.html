@@ -35,8 +35,8 @@
       "affiliation": {"@type": "CollegeOrUniversity", "name": "National and Kapodistrian University of Athens", "url": "https://www.di.uoa.gr/"},
       "description": {{ p.meta_description | jsonify }},
       "knowsAbout": ["Static program analysis", "Pointer analysis", "Java enterprise applications", "TensorFlow shape analysis", "Investigative technology reporting"],
-      "founder": {"@type": "Organization", "name": "Lore Armory", "url": "https://lorearmory.com"},
-      "sameAs": ["{{ scholar }}", "{{ orcid }}", "https://github.com/anantoni", "https://lorearmory.com"]
+      "founder": {"@type": "Organization", "name": "Sourcemined", "url": "https://sourcemined.com"},
+      "sameAs": ["{{ scholar }}", "{{ orcid }}", "https://github.com/anantoni", "https://sourcemined.com"]
     }{% for pub in p.publications %},
     {
       "@type": "ScholarlyArticle",
@@ -57,12 +57,12 @@
     <img class="portrait" src="{{ '/assets/portrait.jpg' | relative_url }}" width="112" height="112" alt="Portrait of {{ p.name }}">
     <div>
       <h1>{{ p.name }}</h1>
-      <p class="titleline">Researcher &middot; PhD candidate, University of Athens &middot; Founder, Lore Armory</p>
+      <p class="titleline">Researcher &middot; PhD candidate, University of Athens &middot; Founder, Sourcemined</p>
       <nav class="links" aria-label="Profile links">
         <a href="{{ scholar }}">Google Scholar</a>
         <a href="{{ orcid }}">ORCID</a>
         <a href="https://github.com/anantoni">GitHub</a>
-        <a href="https://lorearmory.com/">Lore Armory</a>
+        <a href="https://sourcemined.com/">Sourcemined</a>
         <a href="mailto:anantoni@lorearmory.com">Contact</a>
       </nav>
     </div>
@@ -79,8 +79,8 @@
       <p class="more"><a href="#publications">Publications</a></p>
     </article>
     <article class="card">
-      <h3>Applied research at Lore Armory</h3>
-      <p>I founded <a href="https://lorearmory.com/">Lore Armory</a> to publish exact, verified game-mechanics research with open data and open-source tools. The Palworld stat-formula paper (v3.1) comes with a dataset, a free calculator and an open-source save reader.</p>
+      <h3>Applied research at Sourcemined</h3>
+      <p>I founded <a href="https://sourcemined.com/">Sourcemined</a> to publish exact, verified game-mechanics research with open data and open-source tools. The Palworld stat-formula paper (v3.1) comes with a dataset, a free calculator and an open-source save reader.</p>
       <p class="more"><a href="#projects">Projects</a></p>
     </article>
   </div>
@@ -104,7 +104,7 @@
 <section aria-labelledby="projects">
   <h2 id="projects">Projects</h2>
   <ul class="plain">
-    <li><a href="https://lorearmory.com/">Lore Armory</a>: verified game-mechanics research, open data and free tools for RPG players.</li>
+    <li><a href="https://sourcemined.com/">Sourcemined</a>: verified game-mechanics research, open data and free tools for RPG players.</li>
     <li><a href="https://github.com/anantoni/palworld-save-decoder">palworld-save-decoder</a>: open-source Palworld save reader behind the stat-formula paper.</li>
   </ul>
 </section>
