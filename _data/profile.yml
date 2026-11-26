@@ -78,7 +78,7 @@ publications:
     type: Technical note + dataset
     title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
     authors: Anastasios Antoniadis (Sourcemined)
-    note: Technical note v5.0 (22 Nov 2026). Across 2,322 stat values the model matches the game exactly; the confirmation runs were predicted and hashed (sha256) before the in-game check, and v5.0 adds a byte-level equivalence check against the game's own calculation for one build. Covers IVs, level, stars, Souls, trust, awakening, passives, food and hunger, emblems, partner skills and Level Sync.
+    note: "Technical note v5.0 (22 Nov 2026). For one game build, a machine-checked proof that the game's own code for a Pal's maximum HP, Attack and Defense returns the same integer bytes as our reference (the published formula in the play range) for every input, including NaN, infinity and overflow, under seven stated assumptions. All 857 proof leaves have independently checked certificates (Ethos, cake_lpr, Rocq/Flocq, Lean), and the x86-64 instruction semantics agree with the sail-x86 specification on all 2,043 encodings used. In the game, 2,322 stat values, predicted and hashed before each check, all match. The note covers IVs, level, stars, Souls, trust, awakening, passives, food and hunger, emblems, partner skills and Level Sync; party, emblem, partner-skill and Level Sync effects are measured in the game, not proved."
     url: https://doi.org/10.5281/zenodo.24189999
     links:
       - label: Paper (DOI)
