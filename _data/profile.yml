@@ -67,12 +67,23 @@ education:
     detail: "University of Athens, Department of Informatics and Telecommunications. Advisor: Prof. Yannis Smaragdakis."
   - period: 2015 - 2016
     title: "MSc, Computing Systems"
-    detail: "University of Athens. Grade 10/10, valedictorian."
+    detail: "University of Athens. Grade 10/10."
   - period: 2006 - 2014
     title: "BSc, Computer Science"
-    detail: "University of Athens. Grade 8.51/10, salutatorian."
+    detail: "University of Athens. Grade 8.51/10."
 
 publications:
+  - year: 2026
+    venue: Zenodo
+    type: Preprint
+    title: "Marauder: Recovering Unreal Engine type mappings from game files alone"
+    authors: Anastasios Antoniadis
+    url: https://doi.org/10.5281/zenodo.24461104
+    links:
+      - label: Paper (DOI)
+        url: https://doi.org/10.5281/zenodo.24461104
+      - label: Code (GitHub)
+        url: https://github.com/anantoni/marauder
   - year: 2026
     venue: Zenodo
     type: Technical note + dataset
@@ -123,5 +134,5 @@ publications:
     venue: SOAP
     type: Workshop paper
     title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
-    authors: Tony Antoniadis, Konstantinos Triantafyllou, and Yannis Smaragdakis
+    authors: Tony Antoniadis (Anastasios Antoniadis), Konstantinos Triantafyllou, and Yannis Smaragdakis
     url: https://dl.acm.org/doi/10.1145/3088515.3088522
