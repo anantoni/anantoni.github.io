@@ -94,7 +94,7 @@
       <p class="pub__meta"><span class="pub__year">{{ pub.year }}</span> {{ pub.venue }} &middot; {{ pub.type }}</p>
       <h3 class="pub__title">{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
       <p class="pub__authors">{{ pub.authors }}</p>
-      <p>{{ pub.note }}</p>
+      {% if pub.note %}<p>{{ pub.note }}</p>{% endif %}
       {% if pub.links %}<p class="pub__links">{% for l in pub.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</p>{% endif %}
     </li>
   {% endfor %}
