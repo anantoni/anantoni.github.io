@@ -109,6 +109,28 @@
   </ul>
 </section>
 
+<section aria-labelledby="decompilers">
+  <h2 id="decompilers">Decompiler and lifter correctness</h2>
+  <p>I test whether binary lifters and decompilers keep the exact meaning of compiled code, including floating point, NaN handling, rounding and register widths. I check each finding by running the original code or against the specification, and report the bug to the project. Public issues I have filed:</p>
+  <ul class="plain">
+    <li>Ghidra: <a href="https://github.com/NationalSecurityAgency/ghidra/issues/10250">#10250</a>, float comparisons with NaN</li>
+    <li>Ghidra: <a href="https://github.com/NationalSecurityAgency/ghidra/issues/10251">#10251</a>, CVTSS2SI/CVTSD2SI rounding</li>
+    <li>Ghidra: <a href="https://github.com/NationalSecurityAgency/ghidra/issues/10301">#10301</a>, ARM VSEL/VRINT excluded</li>
+    <li>Ghidra: <a href="https://github.com/NationalSecurityAgency/ghidra/issues/10302">#10302</a>, x86 VPINSRD lane assignment</li>
+    <li>Ghidra: <a href="https://github.com/NationalSecurityAgency/ghidra/issues/10303">#10303</a>, x86 VSQRTSD/VSQRTSS operands swapped</li>
+    <li>angr: <a href="https://github.com/angr/angr/issues/7826">#7826</a>, signed division printed as unsigned</li>
+    <li>angr: <a href="https://github.com/angr/angr/issues/7850">#7850</a>, SSE min/max and compares lose NaN behavior</li>
+    <li>rev.ng: <a href="https://github.com/revng/revng/issues/674">#674</a>, float arguments lost on x86-64</li>
+    <li>rellic: <a href="https://github.com/lifting-bits/rellic/issues/354">#354</a>, nested select simplified wrongly</li>
+    <li>anvill: <a href="https://github.com/lifting-bits/anvill/issues/419">#419</a>, unliftable instruction silently deletes a path</li>
+    <li>sail-x86: <a href="https://github.com/shina-lab/sail-x86/issues/3">#3</a>, CMPXCHG r32 zero-extension</li>
+    <li>heimdall-rs: <a href="https://github.com/Jon-Becker/heimdall-rs/issues/774">#774</a>, require() branches swapped</li>
+    <li>Panoramix: <a href="https://github.com/palkeo/panoramix/issues/148">#148</a>, non-payable function printed as payable</li>
+    <li>Rattle: <a href="https://github.com/crytic/rattle/issues/43">#43</a>, PUSH0 disassembled as INVALID</li>
+  </ul>
+  <p>I am available for consulting on static analysis and binary analysis: <a href="mailto:anantoni@sourcemined.com">Contact</a>.</p>
+</section>
+
 <section aria-labelledby="experience">
   <h2 id="experience">Experience</h2>
   <ul class="exp">
