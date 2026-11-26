@@ -78,7 +78,7 @@ publications:
     type: Technical note + dataset
     title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
     authors: Anastasios Antoniadis (Sourcemined)
-    note: "Technical note v5.0 (22 Nov 2026). For one game build, a machine-checked proof that the game's own code for a Pal's maximum HP, Attack and Defense returns the same integer bytes as our reference (the published formula in the play range) for every input, including NaN, infinity and overflow, under seven stated assumptions. All 857 proof leaves have independently checked certificates (Ethos, cake_lpr, Rocq/Flocq, Lean), and the x86-64 instruction semantics agree with the sail-x86 specification on all 2,043 encodings used. In the game, 2,322 stat values, predicted and hashed before each check, all match. The note covers IVs, level, stars, Souls, trust, awakening, passives, food and hunger, emblems, partner skills and Level Sync; party, emblem, partner-skill and Level Sync effects are measured in the game, not proved."
+    note: "Technical note v5.0 (22 Nov 2026). A machine-checked proof that, for one game build, the game's own code for a Pal's maximum HP, Attack and Defense returns the same integer bytes as our reference formula for every input, including NaN and overflow, under seven stated assumptions; every proof step has an independently checked certificate. In the game, 2,322 stat values, predicted and hashed in advance, all match."
     url: https://doi.org/10.5281/zenodo.24189999
     links:
       - label: Paper (DOI)
@@ -100,33 +100,28 @@ publications:
     type: Research paper
     title: "Universal Scalability in Declarative Program Analysis (with Choice-Based Combination Pruning)"
     authors: Anastasios Antoniadis, Ilias Tsatiris, Neville Grech, and Yannis Smaragdakis
-    note: Scaling declarative program analysis by controlling combinatorial explosion with minimal completeness loss.
     url: https://dl.acm.org/doi/10.1145/3763129
   - year: 2020
     venue: ECOOP
     type: Research paper
     title: "Static Analysis of Shape in TensorFlow Programs"
     authors: Sifis Lagouvardos, Julian Dolby, Neville Grech, Anastasios Antoniadis, and Yannis Smaragdakis
-    note: Reasoning statically about tensor shapes in TensorFlow programs.
     url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2020.15
   - year: 2020
     venue: PLDI
     type: Research paper
     title: "Static Analysis of Java Enterprise Applications: Frameworks and Caches, the Elephants in the Room"
     authors: Anastasios Antoniadis, Nikos Filippakis, Paddy Krishnan, Raghavendra Ramesh, Nicholas Allen, and Yannis Smaragdakis
-    note: Research on Java enterprise application analysis and the framework and cache behavior that dominate precision, completeness, and scalability.
     url: https://dl.acm.org/doi/10.1145/3385412.3386026
   - year: 2018
     venue: ECOOP/ISSTA Doctoral Symposium
     type: Doctoral symposium paper
     title: "Two-phase Analysis for Precision and Scalability"
     authors: Anastasios Antoniadis
-    note: Managing the tradeoff between precision and scalability in static analysis.
     url: https://2018.ecoop.org/details/ecoop-issta-2018-doctoral-symposium/9/Two-phase-Analysis-for-Precision-and-Scalability
   - year: 2017
     venue: SOAP
     type: Workshop paper
     title: "Porting Doop to Souffle: A tale of inter-engine portability for Datalog-based analyses"
     authors: Tony Antoniadis, Konstantinos Triantafyllou, and Yannis Smaragdakis
-    note: Portability and engineering tradeoffs in Datalog-based program analysis.
     url: https://dl.acm.org/doi/10.1145/3088515.3088522
