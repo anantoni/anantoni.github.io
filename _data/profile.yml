@@ -86,10 +86,10 @@ publications:
         url: https://github.com/anantoni/marauder
   - year: 2026
     venue: Zenodo
-    type: Technical note + dataset
+    type: Paper + dataset
     title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
     authors: Anastasios Antoniadis (Sourcemined)
-    note: "Technical note v5.0 (22 Nov 2026). A machine-checked proof that, for one game build, the game's own code for a Pal's maximum HP, Attack and Defense returns the same integer bytes as our reference formula for every input, including NaN and overflow, under seven stated assumptions; every proof step has an independently checked certificate. In the game, 2,322 stat values, predicted and hashed in advance, all match."
+    note: "Version 5.1 (26 Nov 2026). A machine-checked proof that, for one game build, the game's own code for a Pal's maximum HP, Attack and Defense returns the same integer bytes as our reference formula for every input, including NaN and overflow, under seven stated assumptions; every proof step has an independently checked certificate. All 2,322 stat values checked in the game match, including 58 confirmation values predicted and hashed before the check."
     url: https://doi.org/10.5281/zenodo.24189999
     links:
       - label: Paper (DOI)
