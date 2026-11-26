@@ -75,6 +75,17 @@ education:
 publications:
   - year: 2026
     venue: Zenodo
+    type: Preprint
+    title: "Marauder: Recovering Unreal Engine type mappings from game files alone"
+    authors: Anastasios Antoniadis
+    url: https://doi.org/10.5281/zenodo.24461104
+    links:
+      - label: Paper (DOI)
+        url: https://doi.org/10.5281/zenodo.24461104
+      - label: Code (GitHub)
+        url: https://github.com/anantoni/marauder
+  - year: 2026
+    venue: Zenodo
     type: Technical note + dataset
     title: "The Palworld IV formula: an exact model of Pal HP, Attack and Defense, verified in game"
     authors: Anastasios Antoniadis (Sourcemined)
